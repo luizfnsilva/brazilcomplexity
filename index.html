@@ -6,7 +6,7 @@
 
 <title>Brazil Complexity</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,16 +23,14 @@ body {
   background: #f5f3ef;
   color: #111;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* GRID 12 COL */
+/* CONTAINER */
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
 }
 
 /* TYPO */
@@ -41,19 +39,20 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 54px;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 
 h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
+  font-size: 30px;
+  margin-bottom: 8px;
 }
 
 p {
   font-size: 16px;
   color: #333;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   max-width: 520px;
 }
 
@@ -72,21 +71,21 @@ p {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(6,18,28,0.7) 0%,
-    rgba(6,18,28,0.4) 40%,
+    rgba(5,15,25,0.65) 0%,
+    rgba(5,15,25,0.35) 35%,
+    rgba(5,15,25,0.12) 60%,
     transparent 100%
   );
 }
 
 .hero-content {
-  grid-column: 1 / span 6;
   position: relative;
   z-index: 2;
   color: white;
 }
 
 .hero-content p {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
 }
 
 /* BUTTON */
@@ -104,29 +103,27 @@ p {
 
 /* SECTION */
 .section {
-  padding: 60px 0;
+  padding: 48px 0;
 }
 
 /* BOOK */
-.book-img {
-  grid-column: 1 / span 4;
+.book {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.book-img img {
-  width: 100%;
-}
-
-.book-text {
-  grid-column: 6 / span 6;
+.book img {
+  width: 260px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* COL */
-.col-left {
-  grid-column: 1 / span 5;
-}
-
-.col-right {
-  grid-column: 7 / span 5;
+.two-col {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 /* FOOTER */
@@ -140,22 +137,15 @@ p {
 
 /* MOBILE */
 @media(max-width: 900px){
-  .container {
-    display: block;
-  }
 
   .hero {
     height: auto;
     padding: 80px 0;
   }
 
-  .hero-content,
-  .book-img,
-  .book-text,
-  .col-left,
-  .col-right {
-    width: 100%;
-    margin-bottom: 24px;
+  .book,
+  .two-col {
+    flex-direction: column;
   }
 
   h1 { font-size: 36px; }
@@ -169,223 +159,6 @@ p {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="hero-content">
-
-      <h1>Brazil Complexity</h1>
-
-      <p>
-        Independent research on local complexity in Brazilian markets.
-      </p>
-
-      <p>
-        Brazil is not one market. It is a system of legal, regulatory,
-        municipal, tax, and operational layers that shape outcomes —
-        and create persistent asymmetries.
-      </p>
-
-      <a href="#book" class="button">Read the Book</a>
-
-    </div>
-  </div>
-</section>
-
-<!-- BOOK -->
-<section class="section" id="book">
-  <div class="container">
-
-    <div class="book-img">
-      <img src="images/book.jpg" alt="Book">
-    </div>
-
-    <div class="book-text">
-      <h2>Clinical Real Estate in Brazil</h2>
-
-      <p>
-        A structured examination of healthcare property,
-        regulatory constraints, and conversion dynamics.
-      </p>
-
-      <a href="#" class="button" style="color:#111;border-color:#ccc;">
-        Acquire
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- WHAT / WHO -->
-<section class="section">
-  <div class="container">
-
-    <div class="col-left">
-      <h2>What this is not</h2>
-      <p>Not macro commentary.</p>
-      <p>Not generalized research.</p>
-      <p>Not advisory at scale.</p>
-    </div>
-
-    <div class="col-right">
-      <h2>Who this is for</h2>
-      <p>Investors evaluating regulated exposure.</p>
-      <p>Operators navigating execution constraints.</p>
-      <p>Professionals requiring local interpretation.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<div class="footer">
-  Brazil Complexity — Independent work on structural asymmetry.<br>
-  Luiz F. Nunes da Silva
-</div>
-
-</body>
-</html>}
-
-/* ===== TYPOGRAPHY ===== */
-h1, h2 {
-  font-family: 'Libre Baskerville', serif;
-}
-
-h1 {
-  font-size: 52px;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 12px;
-  max-width: 520px;
-}
-
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-
-  background: url('images/hero.jpg') center right / cover no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(6,18,28,0.75) 0%,
-    rgba(6,18,28,0.45) 35%,
-    rgba(6,18,28,0.15) 65%,
-    transparent 100%
-  );
-}
-
-.hero-content {
-  grid-column: 1 / span 6;
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-
-.hero-content p {
-  color: rgba(255,255,255,0.85);
-}
-
-/* ===== BUTTON ===== */
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-}
-
-/* ===== SECTION ===== */
-.section {
-  padding: 64px 0;
-}
-
-/* ===== BOOK ===== */
-.book-img {
-  grid-column: 1 / span 4;
-}
-
-.book-img img {
-  width: 100%;
-}
-
-.book-text {
-  grid-column: 6 / span 6;
-}
-
-/* ===== TWO COL ===== */
-.col-left {
-  grid-column: 1 / span 5;
-}
-
-.col-right {
-  grid-column: 7 / span 5;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: #06121c;
-  color: rgba(255,255,255,0.6);
-  text-align: center;
-  padding: 40px 0;
-  font-size: 13px;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width: 900px){
-
-  .container {
-    display: block;
-  }
-
-  h1 { font-size: 38px; }
-
-  .hero {
-    height: auto;
-    padding: 80px 0;
-  }
-
-  .hero-content,
-  .book-img,
-  .book-text,
-  .col-left,
-  .col-right {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
 
     <div class="hero-content">
 
@@ -405,333 +178,6 @@ p {
 
     </div>
 
-  </div>
-</section>
-
-<!-- BOOK -->
-<section class="section" id="book">
-  <div class="container">
-
-    <div class="book-img">
-      <img src="images/book.jpg" alt="Book">
-    </div>
-
-    <div class="book-text">
-      <h2>Clinical Real Estate in Brazil</h2>
-
-      <p>
-        A structured examination of healthcare property,
-        regulatory constraints, and conversion dynamics.
-      </p>
-
-      <a href="#" class="button" style="color:#111;border-color:#ccc;">
-        Acquire
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SCOPE -->
-<section class="section">
-  <div class="container">
-
-    <div class="col-left">
-      <h2>Scope</h2>
-      <p>
-        Focus is placed on regulated sectors where jurisdictional fragmentation
-        and operational constraints materially affect outcomes.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- WHAT / WHO -->
-<section class="section">
-  <div class="container">
-
-    <div class="col-left">
-      <h2>What this is not</h2>
-      <p>Not macro commentary.</p>
-      <p>Not generalized research.</p>
-      <p>Not advisory at scale.</p>
-    </div>
-
-    <div class="col-right">
-      <h2>Who this is for</h2>
-      <p>Investors evaluating regulated exposure.</p>
-      <p>Operators navigating execution constraints.</p>
-      <p>Professionals requiring local interpretation.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- METHOD -->
-<section class="section">
-  <div class="container">
-
-    <div class="col-left">
-      <h2>Method</h2>
-
-      <p>
-        Analysis is grounded in observed practice — how systems operate under real conditions.
-      </p>
-
-      <p>
-        Formal structure is considered, but precedence is given to execution reality.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<div class="footer">
-  Brazil Complexity — Independent work on structural asymmetry.<br>
-  Luiz F. Nunes da Silva
-</div>
-
-</body>
-</html>
-/* =========================
-   TYPOGRAPHY SYSTEM
-========================= */
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background: var(--bg-light);
-  line-height: 1.6;
-}
-
-/* Headings (editorial hierarchy) */
-h1, h2, h3 {
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -0.015em;
-}
-
-h2 {
-  font-size: 34px;
-  letter-spacing: -0.01em;
-}
-
-h3 {
-  font-size: 20px;
-  letter-spacing: -0.005em;
-}
-
-/* Paragraph rhythm */
-p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: calc(var(--baseline) * 1);
-  max-width: 560px;
-}
-
-/* =========================
-   GRID SYSTEM (12 COL)
-========================= */
-
-.container {
-  width: 90%;
-  max-width: var(--container);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: var(--grid-gap);
-
-  align-items: start;
-}
-
-/* =========================
-   SECTIONS (VERTICAL RHYTHM)
-========================= */
-
-.section {
-  padding: calc(var(--baseline) * 9) 0;
-}
-
-.section.compact {
-  padding: calc(var(--baseline) * 6) 0;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-  height: 92vh;
-
-  background: url('images/hero-map.jpg') right center / cover no-repeat;
-
-  display: flex;
-  align-items: center;
-
-  color: white;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(6,18,28,0.78) 0%,
-    rgba(6,18,28,0.48) 32%,
-    rgba(6,18,28,0.18) 58%,
-    rgba(6,18,28,0.04) 78%,
-    rgba(6,18,28,0) 100%
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  grid-column: 1 / span 6;
-}
-
-.hero-content h1 {
-  color: rgba(255,255,255,0.96);
-  margin-bottom: calc(var(--baseline) * 1.5);
-}
-
-.hero-content p {
-  color: rgba(255,255,255,0.82);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.button {
-  display: inline-block;
-  padding: 12px 22px;
-  margin-top: calc(var(--baseline) * 2);
-
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  text-decoration: none;
-  border: 1px solid white;
-  color: white;
-}
-
-.button.light {
-  border-color: #ddd;
-  color: #222;
-}
-
-/* =========================
-   BOOK SECTION
-========================= */
-
-.book {
-  grid-column: 1 / span 5;
-}
-
-.book img {
-  width: 100%;
-  max-width: 360px;
-}
-
-.book-text {
-  grid-column: 6 / span 7;
-}
-
-.kicker {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #6f8f86;
-  margin-bottom: calc(var(--baseline) * 1);
-}
-
-/* =========================
-   TWO COLUMN TEXT
-========================= */
-
-.two-col {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-
-  margin-top: calc(var(--baseline) * 2);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-  background: var(--bg-dark);
-  color: rgba(255,255,255,0.6);
-
-  padding: calc(var(--baseline) * 4) 0;
-  text-align: center;
-
-  font-size: 13px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width: 900px) {
-
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content,
-  .book,
-  .book-text {
-    grid-column: auto;
-  }
-
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Brazil Complexity</h1>
-
-      <p>
-        Independent research on local complexity in Brazilian markets.
-      </p>
-
-      <p>
-        Brazil is not one market. It is a system of legal, regulatory,
-        municipal, tax, and operational layers that shape outcomes —
-        and create persistent asymmetries.
-      </p>
-
-      <a href="#book" class="button">Read the Book</a>
-    </div>
   </div>
 </section>
 
@@ -740,51 +186,35 @@ p {
   <div class="container">
 
     <div class="book">
-      <img src="images/book-cover.jpg" alt="Book">
-    </div>
 
-    <div class="book-text">
-      <div class="kicker">Volume I</div>
+      <img src="images/book.jpg" alt="Book">
 
-      <h2>Clinical Real Estate in Brazil</h2>
+      <div>
+        <h2>Clinical Real Estate in Brazil</h2>
 
-      <p>
-        A structured examination of healthcare property, regulatory constraints,
-        and clinical conversion dynamics.
-      </p>
+        <p>
+          A structured examination of healthcare property,
+          regulatory constraints, and conversion dynamics.
+        </p>
 
-      <a href="#" class="button light">Acquire</a>
-    </div>
+        <a href="#" class="button" style="color:#111;border-color:#ccc;">
+          Acquire
+        </a>
+      </div>
 
-  </div>
-</section>
-
-<!-- SCOPE -->
-<section class="section compact">
-  <div class="container">
-
-    <div style="grid-column: 1 / span 8;">
-      <h2>Scope</h2>
-
-      <p>
-        Focus is placed on regulated sectors where jurisdictional fragmentation
-        and operational constraints materially affect outcomes, with emphasis
-        on real assets and infrastructure-linked activity.
-      </p>
     </div>
 
   </div>
 </section>
 
 <!-- WHAT / WHO -->
-<section class="section compact">
+<section class="section">
   <div class="container">
 
-    <div class="two-col" style="grid-column: 1 / span 10;">
+    <div class="two-col">
 
       <div>
         <h2>What this is not</h2>
-
         <p>Not macro commentary.</p>
         <p>Not generalized research.</p>
         <p>Not advisory at scale.</p>
@@ -792,7 +222,6 @@ p {
 
       <div>
         <h2>Who this is for</h2>
-
         <p>Investors evaluating regulated exposure.</p>
         <p>Operators navigating execution constraints.</p>
         <p>Professionals requiring local interpretation.</p>
@@ -803,315 +232,7 @@ p {
   </div>
 </section>
 
-<!-- METHOD -->
-<section class="section compact">
-  <div class="container">
-
-    <div style="grid-column: 1 / span 8;">
-      <h2>Method</h2>
-
-      <p>
-        Analysis is grounded in observed practice — how systems operate
-        under real conditions.
-      </p>
-
-      <p>
-        Formal structure is considered, but precedence is given to execution reality.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 <!-- FOOTER -->
-<div class="footer">
-  Brazil Complexity — Independent work on structural asymmetry.<br>
-  Luiz F. Nunes da Silva
-</div>
-
-</body>
-</html>  font-size: clamp(28px, 3.2vw, 44px);
-  line-height: 1.15;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.6;
-  color: #3c454d;
-  max-width: 520px;
-}
-
-/* =========================
-   GRID 12 COL
-========================= */
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 24px;
-}
-
-/* =========================
-   NAV
-========================= */
-
-.nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 22px 48px;
-  display: flex;
-  justify-content: space-between;
-  background: rgba(5,15,25,0.92);
-  color: white;
-  z-index: 100;
-}
-
-.nav a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  margin-left: 28px;
-  font-size: clamp(10px, 0.8vw, 12px);
-  letter-spacing: 0.12em;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  position: relative;
-  background: url('/images/hero-map.jpg') no-repeat;
-  background-size: cover;
-  background-position: 72% center;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(6,18,28,0.85) 0%,
-    rgba(6,18,28,0.55) 35%,
-    rgba(6,18,28,0.25) 60%,
-    rgba(6,18,28,0.05) 80%,
-    rgba(6,18,28,0) 100%
-  );
-}
-
-.hero .container {
-  position: relative;
-}
-
-.hero-content {
-  grid-column: 1 / span 6;
-  color: white;
-}
-
-.hero p {
-  color: rgba(255,255,255,0.72);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.button {
-  display: inline-block;
-  padding: 12px 18px;
-  border: 1px solid rgba(255,255,255,0.3);
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  margin-right: 12px;
-}
-
-.button.light {
-  color: black;
-  border-color: #ccc;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section {
-  padding: 88px 0;
-}
-
-.section.compact {
-  padding: 64px 0;
-}
-
-/* =========================
-   BOOK
-========================= */
-
-.book img {
-  grid-column: 2 / span 4;
-  width: 100%;
-}
-
-.book-text {
-  grid-column: 7 / span 5;
-}
-
-/* =========================
-   WHAT / WHO
-========================= */
-
-.grid-2 {
-  display: contents;
-}
-
-.grid-2 > div:first-child {
-  grid-column: 3 / span 4;
-}
-
-.grid-2 > div:last-child {
-  grid-column: 7 / span 4;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-  padding: 60px 0;
-  text-align: center;
-  background: #06121c;
-  color: rgba(255,255,255,0.6);
-  font-size: 12px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content,
-  .book img,
-  .book-text,
-  .grid-2 > div {
-    grid-column: 1;
-  }
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="nav">
-  <div>Brazil Complexity</div>
-  <div>
-    <a href="#book">BOOK</a>
-    <a href="#research">RESEARCH</a>
-    <a href="#consult">CONSULTATION</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Brazil Complexity</h1>
-      <p>
-        Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.
-      </p>
-
-      <a href="#book" class="button">READ THE BOOK</a>
-      <a href="#research" class="button">RESEARCH NOTES</a>
-    </div>
-  </div>
-</section>
-
-<!-- POSITIONING -->
-<section class="section compact">
-  <div class="container">
-    <div style="grid-column: 3 / span 6;">
-      <h2>Positioning</h2>
-      <p>
-        This work treats fragmentation, regulatory density, and execution constraints as first-order variables. Value is not discovered in spite of these layers, but through them.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- BOOK -->
-<section id="book" class="section">
-  <div class="container book">
-    <img src="/images/book-cover.jpg">
-    <div class="book-text">
-      <h2>Clinical Real Estate in Brazil</h2>
-      <p>
-        A structured examination of healthcare property, regulatory constraints, and conversion dynamics.
-      </p>
-      <a href="#" class="button light">ACQUIRE THE BOOK</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT / WHO -->
-<section class="section">
-  <div class="container grid-2">
-    <div>
-      <h2>What this is not</h2>
-      <p>Not macro commentary.</p>
-      <p>Not generalized research.</p>
-      <p>Not advisory at scale.</p>
-    </div>
-    <div>
-      <h2>Who this is for</h2>
-      <p>Investors evaluating regulated exposure.</p>
-      <p>Operators navigating execution constraints.</p>
-      <p>Professionals requiring local interpretation.</p>
-    </div>
-  </div>
-</section>
-
-<!-- METHOD -->
-<section class="section compact">
-  <div class="container">
-    <div style="grid-column: 3 / span 6;">
-      <h2>Method</h2>
-      <p>
-        Analysis is grounded in observed practice — how systems operate under real conditions.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CONSULT -->
-<section id="consult" class="section">
-  <div class="container">
-    <div style="grid-column: 3 / span 6;">
-      <h2>Consultation</h2>
-      <p>
-        Engagements are selective and structured around interpretation where regulatory and execution layers are material.
-      </p>
-      <a href="#" class="button light">REQUEST</a>
-    </div>
-  </div>
-</section>
-
 <div class="footer">
   Brazil Complexity — Independent work on structural asymmetry.<br>
   Luiz F. Nunes da Silva
