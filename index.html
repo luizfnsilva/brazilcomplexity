@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Brazil Complexity | Regulated Markets, Real Assets, and Local Complexity</title>
+
 <meta name="description" content="Independent research on Brazilian regulated markets, real assets, and local complexity.">
 
 <meta property="og:title" content="Brazil Complexity">
@@ -12,23 +13,29 @@
 <meta property="og:image" content="https://brazilcomplexity.com/images/og-image.jpg">
 <meta property="og:type" content="website">
 
-<link rel="icon" href="images/icon.png">
+<link rel="icon" href="./images/icon.png">
 
 <style>
+
+/* BASE */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   background: #06131d;
   color: #fffaf0;
-  line-height: 1.7;
+  line-height: 1.72;
   -webkit-font-smoothing: antialiased;
 }
 
 .container {
+  width: 100%;
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 28px;
 }
+
+/* NAV */
 
 header {
   padding: 24px 0;
@@ -56,109 +63,143 @@ header {
   text-decoration: none;
 }
 
+/* HERO */
+
 .hero {
-  padding: 120px 0 110px;
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 120px;
+}
+
+.hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-.hero-copy {
-  animation: memoRise .75s ease-out both;
+/* IMAGEM HERO CONTROLADA */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
-.hero-visual {
-  animation: memoFade .95s ease-out both;
-  animation-delay: .12s;
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* 🔥 AJUSTE FINO DO CROP */
+  object-position: 70% center;
+
+  opacity: 0.9;
+  filter: brightness(0.8) contrast(1.05);
 }
+
+/* OVERLAY PROFISSIONAL */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #06131d 0%,
+    #06131d 50%,
+    rgba(6,19,29,0.85) 65%,
+    rgba(6,19,29,0.3) 85%,
+    rgba(6,19,29,0) 100%
+  );
+  z-index: 1;
+}
+
+/* TIPOGRAFIA */
 
 .label {
   font-size: 11px;
   letter-spacing: .28em;
   text-transform: uppercase;
   color: #9ec8b2;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(60px,7vw,96px);
-  line-height: .9;
+  font-size: clamp(64px,7vw,96px);
+  line-height: .88;
   margin: 0 0 26px;
-  letter-spacing: -1.2px;
+  letter-spacing: -1.4px;
 }
 
 .subtitle {
   font-family: Georgia, serif;
-  font-size: 27px;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
 .text {
-  color: rgba(255,255,255,0.72);
-  max-width: 470px;
+  color: rgba(255,255,255,0.88);
+  max-width: 480px;
 }
 
+/* BOTÕES */
+
 .buttons {
-  margin-top: 34px;
+  margin-top: 36px;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
   padding: 13px 20px;
   font-size: 10.5px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid rgba(255,255,255,0.5);
   text-decoration: none;
   color: #fffaf0;
-  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  transition: all .2s ease;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  border-color: #fffaf0;
+  border-color: #ffffff;
 }
 
 .btn-primary {
-  background: #fffaf0;
+  background: #ffffff;
   color: #06131d;
+  font-weight: 600;
   border: none;
 }
 
-.hero img {
-  width: 100%;
-  object-fit: cover;
-  opacity: .95;
-}
+/* SECTIONS */
 
 section {
   background: #f8f6f0;
   color: #111417;
   padding: 100px 0;
-  border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 h2 {
   font-family: Georgia, serif;
   font-size: 42px;
-  line-height: 1.05;
   margin-bottom: 18px;
-  letter-spacing: -0.5px;
 }
 
 p {
   font-size: 16px;
-  margin-bottom: 16px;
 }
 
 .muted {
   color: #5f6e6a;
 }
+
+/* BOOK */
 
 .book {
   display: grid;
@@ -172,11 +213,15 @@ p {
   box-shadow: 0 28px 70px rgba(0,0,0,0.25);
 }
 
+/* CTA */
+
 .cta-box {
   border: 1px solid rgba(0,0,0,0.1);
   padding: 36px;
   background: #ffffff;
 }
+
+/* FOOTER */
 
 footer {
   background: #050d13;
@@ -186,23 +231,11 @@ footer {
   color: rgba(255,255,255,0.6);
 }
 
-@keyframes memoRise {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes memoFade {
-  from { opacity: 0; transform: scale(.985); }
-  to { opacity: 1; transform: scale(1); }
-}
+/* MOBILE */
 
 @media(max-width:900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
 
-  .book {
+  .hero-inner {
     grid-template-columns: 1fr;
   }
 
@@ -214,79 +247,8 @@ footer {
     font-size: 23px;
   }
 
-  .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .nav a {
-    margin-left: 0;
-    margin-right: 18px;
-  }
 }
 
-/* PRINTABLE MEMO STYLE */
-@media print {
-  body {
-    background: #ffffff;
-    color: #111111;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.55;
-  }
-
-  header, .buttons, footer, .hero-visual, .book img {
-    display: none !important;
-  }
-
-  .container {
-    max-width: 720px;
-    padding: 0;
-  }
-
-  .hero, section {
-    display: block;
-    padding: 28px 0;
-    background: #ffffff;
-    color: #111111;
-    border-top: 1px solid #cccccc;
-  }
-
-  h1 {
-    font-size: 42px;
-    color: #111111;
-    letter-spacing: -0.5px;
-  }
-
-  h2 {
-    font-size: 28px;
-    color: #111111;
-  }
-
-  .subtitle, .text, p, .muted {
-    color: #111111 !important;
-    font-size: 14px;
-  }
-
-  .label {
-    color: #333333;
-    letter-spacing: .18em;
-  }
-
-  .book {
-    display: block;
-  }
-
-  .cta-box {
-    border: none;
-    padding: 0;
-  }
-
-  a::after {
-    content: " (" attr(href) ")";
-    font-size: 11px;
-  }
-}
 </style>
 </head>
 
@@ -303,35 +265,43 @@ footer {
   </div>
 </header>
 
-<section class="hero container">
-  <div class="hero-copy">
-    <div class="label">Brazil Complexity Arbitrage Series</div>
+<section class="hero">
 
-    <h1>Brazil Complexity</h1>
-
-    <div class="subtitle">
-      Independent research on local complexity in Brazilian markets.
-    </div>
-
-    <div class="text">
-      Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.
-    </div>
-
-    <div class="buttons">
-      <a class="btn btn-primary" href="#book">Read the Book</a>
-      <a class="btn" href="SUBSTACK_URL">Research Notes</a>
-      <a class="btn" href="CALENDLY_URL">Strategy Consultation</a>
-    </div>
+  <div class="hero-bg">
+    <img src="./images/hero.jpg" alt="Brazil complexity map">
   </div>
 
-  <div class="hero-visual">
-    <img src="images/hero.jpg" alt="Brazil complexity map">
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-inner">
+
+    <div>
+      <div class="label">Brazil Complexity Arbitrage Series</div>
+
+      <h1>Brazil Complexity</h1>
+
+      <div class="subtitle">
+        Independent research on local complexity in Brazilian markets.
+      </div>
+
+      <div class="text">
+        Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.
+      </div>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#book">Read the Book</a>
+        <a class="btn" href="SUBSTACK_URL">Research Notes</a>
+        <a class="btn" href="CALENDLY_URL">Strategy Consultation</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="book">
   <div class="container book">
-    <img src="images/book.jpg" alt="Book cover">
+
+    <img src="./images/book.jpg" alt="Book cover">
 
     <div>
       <div class="label">Volume I</div>
@@ -348,6 +318,7 @@ footer {
 
       <a class="btn btn-primary" href="AMAZON_URL">Acquire the Book</a>
     </div>
+
   </div>
 </section>
 
@@ -365,15 +336,16 @@ footer {
 
 <section id="consultation">
   <div class="container">
+
     <div class="cta-box">
       <h2>Brazil Market Strategy Consultation</h2>
 
       <p>
-        A structured intake followed by a written strategic note for investors and professionals evaluating Brazil-related opportunities.
+        A structured intake followed by a written strategic note for investors evaluating Brazil-related opportunities.
       </p>
 
       <p class="muted">
-        Designed for cases where local regulation, municipal execution, and structural complexity materially affect outcomes.
+        Designed for cases where local regulation and execution materially affect outcomes.
       </p>
 
       <a class="btn btn-primary" href="CALENDLY_URL">Request Consultation</a>
@@ -381,7 +353,9 @@ footer {
       <p style="margin-top:20px;font-size:12px;color:#6b6b6b;">
         Limited availability — engagements accepted selectively.
       </p>
+
     </div>
+
   </div>
 </section>
 
