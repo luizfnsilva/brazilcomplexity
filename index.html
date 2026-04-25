@@ -10,14 +10,14 @@
 
 <style>
 
-/* ===== RESET ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
+/* BASE */
 body {
   font-family: 'Inter', sans-serif;
   background: #f5f3ef;
@@ -25,16 +25,223 @@ body {
   line-height: 1.6;
 }
 
-/* ===== GRID 12 COL ===== */
+/* GRID 12 COL */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 24px;
+  gap: 24px;
 }
+
+/* TYPO */
+h1, h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+  max-width: 520px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  background: url('images/hero.jpg') center right / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6,18,28,0.7) 0%,
+    rgba(6,18,28,0.4) 40%,
+    transparent 100%
+  );
+}
+
+.hero-content {
+  grid-column: 1 / span 6;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-content p {
+  color: rgba(255,255,255,0.85);
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 0;
+}
+
+/* BOOK */
+.book-img {
+  grid-column: 1 / span 4;
+}
+
+.book-img img {
+  width: 100%;
+}
+
+.book-text {
+  grid-column: 6 / span 6;
+}
+
+/* COL */
+.col-left {
+  grid-column: 1 / span 5;
+}
+
+.col-right {
+  grid-column: 7 / span 5;
+}
+
+/* FOOTER */
+.footer {
+  background: #06121c;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 40px 0;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media(max-width: 900px){
+  .container {
+    display: block;
+  }
+
+  .hero {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .hero-content,
+  .book-img,
+  .book-text,
+  .col-left,
+  .col-right {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  h1 { font-size: 36px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <h1>Brazil Complexity</h1>
+
+      <p>
+        Independent research on local complexity in Brazilian markets.
+      </p>
+
+      <p>
+        Brazil is not one market. It is a system of legal, regulatory,
+        municipal, tax, and operational layers that shape outcomes —
+        and create persistent asymmetries.
+      </p>
+
+      <a href="#book" class="button">Read the Book</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="section" id="book">
+  <div class="container">
+
+    <div class="book-img">
+      <img src="images/book.jpg" alt="Book">
+    </div>
+
+    <div class="book-text">
+      <h2>Clinical Real Estate in Brazil</h2>
+
+      <p>
+        A structured examination of healthcare property,
+        regulatory constraints, and conversion dynamics.
+      </p>
+
+      <a href="#" class="button" style="color:#111;border-color:#ccc;">
+        Acquire
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT / WHO -->
+<section class="section">
+  <div class="container">
+
+    <div class="col-left">
+      <h2>What this is not</h2>
+      <p>Not macro commentary.</p>
+      <p>Not generalized research.</p>
+      <p>Not advisory at scale.</p>
+    </div>
+
+    <div class="col-right">
+      <h2>Who this is for</h2>
+      <p>Investors evaluating regulated exposure.</p>
+      <p>Operators navigating execution constraints.</p>
+      <p>Professionals requiring local interpretation.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  Brazil Complexity — Independent work on structural asymmetry.<br>
+  Luiz F. Nunes da Silva
+</div>
+
+</body>
+</html>}
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2 {
