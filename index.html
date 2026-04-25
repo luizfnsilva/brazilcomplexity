@@ -1,214 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Brazil Complexity | Structural Interpretation of Regulated Markets</title>
+<title>Brazil Complexity</title>
 
-<meta name="description" content="Independent work on structural asymmetry in Brazilian regulated markets.">
-
-<link rel="icon" href="./images/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* BASE */
+/* =========================
+   BASE
+========================= */
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  background: #06131d;
-  color: #fffaf0;
-  line-height: 1.82;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  background: #f6f4ef;
+  color: #0b0f14;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 26px;
-}
-
-/* NAV */
-
-header {
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.brand {
-  font-family: Georgia, serif;
-  font-size: 23px;
-}
-
-.nav a {
-  margin-left: 24px;
-  font-size: 10.5px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-}
-
-/* HERO */
-
-.hero {
-  position: relative;
-  padding: 160px 0 130px;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 74% center;
-  filter: brightness(0.72);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(6,19,29,0.97) 0%,
-    rgba(6,19,29,0.9) 45%,
-    rgba(6,19,29,0.6) 70%,
-    rgba(6,19,29,0.15) 92%
-  );
-}
-
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 500px;
-}
-
-.label {
-  font-size: 10.5px;
-  letter-spacing: .32em;
-  text-transform: uppercase;
-  color: #9ec8b2;
-  margin-bottom: 28px;
-}
+/* =========================
+   TYPOGRAPHY (CLAMP)
+========================= */
 
 h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(72px,7vw,96px);
-  line-height: .82;
-  margin-bottom: 30px;
-  letter-spacing: -1.8px;
-}
-
-.subtitle {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  margin-bottom: 26px;
-}
-
-.text {
-  color: rgba(255,255,255,0.9);
-}
-
-/* BUTTONS (mais discretos) */
-
-.buttons {
-  margin-top: 44px;
-}
-
-.btn {
-  padding: 11px 16px;
-  border: 1px solid rgba(255,255,255,0.35);
-  text-decoration: none;
-  color: white;
-  margin-right: 10px;
-  font-size: 10.5px;
-  letter-spacing: .18em;
-}
-
-.btn-primary {
-  background: rgba(255,255,255,0.9);
-  color: #06131d;
-  border: none;
-}
-
-/* SECTIONS */
-
-section {
-  background: #f8f6f0;
-  color: #111;
-  padding: 150px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.08;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-family: Georgia, serif;
-  font-size: 40px;
-  margin-bottom: 24px;
-  letter-spacing: -0.6px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.15;
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size: 15.8px;
-  max-width: 680px;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.6;
+  color: #3c454d;
+  max-width: 520px;
 }
 
-.muted {
-  color: #5f6e6a;
-}
+/* =========================
+   GRID 12 COL
+========================= */
 
-/* GRID */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 
-.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
 }
 
-/* BOOK */
+/* =========================
+   NAV
+========================= */
 
-.book {
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 22px 48px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(5,15,25,0.92);
+  color: white;
+  z-index: 100;
+}
+
+.nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: clamp(10px, 0.8vw, 12px);
+  letter-spacing: 0.12em;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 60px;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
+  background: url('/images/hero-map.jpg') no-repeat;
+  background-size: cover;
+  background-position: 72% center;
 }
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6,18,28,0.85) 0%,
+    rgba(6,18,28,0.55) 35%,
+    rgba(6,18,28,0.25) 60%,
+    rgba(6,18,28,0.05) 80%,
+    rgba(6,18,28,0) 100%
+  );
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero-content {
+  grid-column: 1 / span 6;
+  color: white;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.72);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-right: 12px;
+}
+
+.button.light {
+  color: black;
+  border-color: #ccc;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 88px 0;
+}
+
+.section.compact {
+  padding: 64px 0;
+}
+
+/* =========================
+   BOOK
+========================= */
 
 .book img {
+  grid-column: 2 / span 4;
   width: 100%;
 }
 
-/* CTA (quase invisível) */
-
-.cta-box {
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 32px;
-  background: white;
+.book-text {
+  grid-column: 7 / span 5;
 }
 
-/* FOOTER */
+/* =========================
+   WHAT / WHO
+========================= */
 
-footer {
-  background: #050d13;
-  padding: 70px 0;
+.grid-2 {
+  display: contents;
+}
+
+.grid-2 > div:first-child {
+  grid-column: 3 / span 4;
+}
+
+.grid-2 > div:last-child {
+  grid-column: 7 / span 4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 60px 0;
   text-align: center;
+  background: #06121c;
+  color: rgba(255,255,255,0.6);
   font-size: 12px;
-  color: rgba(255,255,255,0.55);
 }
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:900px){
-  .grid { grid-template-columns: 1fr; }
-  .book { grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content,
+  .book img,
+  .book-text,
+  .grid-2 > div {
+    grid-column: 1;
+  }
+
 }
 
 </style>
@@ -216,147 +223,103 @@ footer {
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="brand">Brazil Complexity</div>
-    <div>
-      <a href="#book">Book</a>
-      <a href="SUBSTACK_URL">Research</a>
-      <a href="CALENDLY_URL">Contact</a>
-    </div>
+<div class="nav">
+  <div>Brazil Complexity</div>
+  <div>
+    <a href="#book">BOOK</a>
+    <a href="#research">RESEARCH</a>
+    <a href="#consult">CONSULTATION</a>
   </div>
-</header>
+</div>
 
+<!-- HERO -->
 <section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Brazil Complexity</h1>
+      <p>
+        Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.
+      </p>
 
-  <div class="hero-bg">
-    <img src="./images/hero.jpg">
-  </div>
-
-  <div class="hero-overlay"></div>
-
-  <div class="container hero-inner">
-
-    <div class="label">Brazil Complexity Arbitrage Series</div>
-
-    <h1>Brazil Complexity</h1>
-
-    <div class="subtitle">
-      Structural interpretation of regulated markets.
+      <a href="#book" class="button">READ THE BOOK</a>
+      <a href="#research" class="button">RESEARCH NOTES</a>
     </div>
+  </div>
+</section>
 
-    <p class="text">
-      Local friction is structural. Legal frameworks, municipal practices, and execution constraints define access, pricing, and asymmetry.
-    </p>
-
-    <div class="buttons">
-      <a class="btn btn-primary" href="#book">Book</a>
-      <a class="btn" href="SUBSTACK_URL">Research</a>
+<!-- POSITIONING -->
+<section class="section compact">
+  <div class="container">
+    <div style="grid-column: 3 / span 6;">
+      <h2>Positioning</h2>
+      <p>
+        This work treats fragmentation, regulatory density, and execution constraints as first-order variables. Value is not discovered in spite of these layers, but through them.
+      </p>
     </div>
-
   </div>
 </section>
 
-<section>
-  <div class="container">
-
-    <h2>Positioning</h2>
-
-    <p>
-      This work treats fragmentation, regulatory density, and execution constraints as first-order variables. Value is not discovered in spite of these layers, but through them.
-    </p>
-
+<!-- BOOK -->
+<section id="book" class="section">
+  <div class="container book">
+    <img src="/images/book-cover.jpg">
+    <div class="book-text">
+      <h2>Clinical Real Estate in Brazil</h2>
+      <p>
+        A structured examination of healthcare property, regulatory constraints, and conversion dynamics.
+      </p>
+      <a href="#" class="button light">ACQUIRE THE BOOK</a>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-
-    <h2>Method</h2>
-
-    <p>
-      Analysis is grounded in observed practice — how systems operate under real conditions. Formal structure is considered, but precedence is given to execution reality.
-    </p>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Scope</h2>
-
-    <p>
-      Focus is placed on regulated sectors where jurisdictional fragmentation and operational constraints materially affect outcomes, with emphasis on real assets and infrastructure-linked activity.
-    </p>
-
-  </div>
-</section>
-
-<section>
-  <div class="container grid">
-
+<!-- WHAT / WHO -->
+<section class="section">
+  <div class="container grid-2">
     <div>
       <h2>What this is not</h2>
       <p>Not macro commentary.</p>
       <p>Not generalized research.</p>
       <p>Not advisory at scale.</p>
     </div>
-
     <div>
       <h2>Who this is for</h2>
       <p>Investors evaluating regulated exposure.</p>
       <p>Operators navigating execution constraints.</p>
       <p>Professionals requiring local interpretation.</p>
     </div>
-
   </div>
 </section>
 
-<section id="book">
-  <div class="container book">
-
-    <img src="./images/book.jpg">
-
-    <div>
-
-      <div class="label">Volume I</div>
-
-      <h2>Clinical Real Estate in Brazil</h2>
-
-      <p>
-        A structured examination of healthcare property, regulatory constraints, and conversion dynamics.
-      </p>
-
-      <a class="btn btn-primary" href="AMAZON_URL">Acquire</a>
-
-    </div>
-
-  </div>
-</section>
-
-<section>
+<!-- METHOD -->
+<section class="section compact">
   <div class="container">
+    <div style="grid-column: 3 / span 6;">
+      <h2>Method</h2>
+      <p>
+        Analysis is grounded in observed practice — how systems operate under real conditions.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <div class="cta-box">
-
+<!-- CONSULT -->
+<section id="consult" class="section">
+  <div class="container">
+    <div style="grid-column: 3 / span 6;">
       <h2>Consultation</h2>
-
       <p>
         Engagements are selective and structured around interpretation where regulatory and execution layers are material.
       </p>
-
-      <a class="btn btn-primary" href="CALENDLY_URL">Request</a>
-
+      <a href="#" class="button light">REQUEST</a>
     </div>
-
   </div>
 </section>
 
-<footer>
-Brazil Complexity — Independent work on structural asymmetry.<br>
-Luiz F. Nunes da Silva
-</footer>
+<div class="footer">
+  Brazil Complexity — Independent work on structural asymmetry.<br>
+  Luiz F. Nunes da Silva
+</div>
 
 </body>
 </html>
