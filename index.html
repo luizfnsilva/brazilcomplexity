@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Brazil Complexity | Regulated Markets, Real Assets, and Local Complexity</title>
+<meta name="description" content="Independent research on Brazilian regulated markets, real assets, and local complexity.">
+
+<meta property="og:title" content="Brazil Complexity">
+<meta property="og:description" content="Independent research on Brazilian markets and complexity arbitrage.">
+<meta property="og:image" content="https://brazilcomplexity.com/images/og-image.jpg">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="images/icon.png">
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  background: #06131d;
+  color: #fffaf0;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  letter-spacing: -0.4px;
+}
+
+.nav a {
+  margin-left: 24px;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+.hero {
+  padding: 120px 0 110px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-copy {
+  animation: memoRise .75s ease-out both;
+}
+
+.hero-visual {
+  animation: memoFade .95s ease-out both;
+  animation-delay: .12s;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #9ec8b2;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(60px,7vw,96px);
+  line-height: .9;
+  margin: 0 0 26px;
+  letter-spacing: -1.2px;
+}
+
+.subtitle {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: rgba(255,255,255,0.72);
+  max-width: 470px;
+}
+
+.buttons {
+  margin-top: 34px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.28);
+  text-decoration: none;
+  color: #fffaf0;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: #fffaf0;
+}
+
+.btn-primary {
+  background: #fffaf0;
+  color: #06131d;
+  border: none;
+}
+
+.hero img {
+  width: 100%;
+  object-fit: cover;
+  opacity: .95;
+}
+
+section {
+  background: #f8f6f0;
+  color: #111417;
+  padding: 100px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.muted {
+  color: #5f6e6a;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.book img {
+  width: 100%;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.25);
+}
+
+.cta-box {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 36px;
+  background: #ffffff;
+}
+
+footer {
+  background: #050d13;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+@keyframes memoRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes memoFade {
+  from { opacity: 0; transform: scale(.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media(max-width:900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .book {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 23px;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+}
+
+/* PRINTABLE MEMO STYLE */
+@media print {
+  body {
+    background: #ffffff;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+
+  header, .buttons, footer, .hero-visual, .book img {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 720px;
+    padding: 0;
+  }
+
+  .hero, section {
+    display: block;
+    padding: 28px 0;
+    background: #ffffff;
+    color: #111111;
+    border-top: 1px solid #cccccc;
+  }
+
+  h1 {
+    font-size: 42px;
+    color: #111111;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: #111111;
+  }
+
+  .subtitle, .text, p, .muted {
+    color: #111111 !important;
+    font-size: 14px;
+  }
+
+  .label {
+    color: #333333;
+    letter-spacing: .18em;
+  }
+
+  .book {
+    display: block;
+  }
+
+  .cta-box {
+    border: none;
+    padding: 0;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 11px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">Brazil Complexity</div>
+    <div>
+      <a href="#book">Book</a>
+      <a href="#research">Research</a>
+      <a href="#consultation">Consultation</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="hero-copy">
+    <div class="label">Brazil Complexity Arbitrage Series</div>
+
+    <h1>Brazil Complexity</h1>
+
+    <div class="subtitle">
+      Independent research on local complexity in Brazilian markets.
+    </div>
+
+    <div class="text">
+      Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.
+    </div>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="#book">Read the Book</a>
+      <a class="btn" href="SUBSTACK_URL">Research Notes</a>
+      <a class="btn" href="CALENDLY_URL">Strategy Consultation</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <img src="images/hero.jpg" alt="Brazil complexity map">
+  </div>
+</section>
+
+<section id="book">
+  <div class="container book">
+    <img src="images/book.jpg" alt="Book cover">
+
+    <div>
+      <div class="label">Volume I</div>
+
+      <h2>Clinical Real Estate in Brazil</h2>
+
+      <p>
+        The first volume of the Brazil Complexity Arbitrage Series examines healthcare property, regulatory constraints, and clinical conversion dynamics.
+      </p>
+
+      <p class="muted">
+        A structured case study on how local complexity creates persistent mispricing in Brazilian real assets.
+      </p>
+
+      <a class="btn btn-primary" href="AMAZON_URL">Acquire the Book</a>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <h2>Research Notes</h2>
+
+    <p>
+      Short-form analyses on regulated markets, regional asymmetries, and execution risk across Brazil.
+    </p>
+
+    <a class="btn btn-primary" href="SUBSTACK_URL">Access Research</a>
+  </div>
+</section>
+
+<section id="consultation">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Brazil Market Strategy Consultation</h2>
+
+      <p>
+        A structured intake followed by a written strategic note for investors and professionals evaluating Brazil-related opportunities.
+      </p>
+
+      <p class="muted">
+        Designed for cases where local regulation, municipal execution, and structural complexity materially affect outcomes.
+      </p>
+
+      <a class="btn btn-primary" href="CALENDLY_URL">Request Consultation</a>
+
+      <p style="margin-top:20px;font-size:12px;color:#6b6b6b;">
+        Limited availability — engagements accepted selectively.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+Brazil Complexity — Independent research on Brazilian regulated markets, real assets, and local complexity.<br>
+By Luiz F. Nunes da Silva
+</footer>
+
+</body>
+</html>
