@@ -1,0 +1,22 @@
+/* TEAM */
+
+Author: Luiz F. Nunes da Silva
+Role: Economist · Writer · Researcher
+Location: Brazil
+Contact: hello [at] brazilcomplexity.com
+Substack: brazilcomplexity.substack.com
+
+/* SITE */
+
+Name: Brazil Complexity
+Description: Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazilian markets.
+Language: English
+Doctype: HTML5
+IDE: Direct authoring
+Standards: HTML5, CSS3, Schema.org
+
+/* THANKS */
+
+Fonts: Fraunces, Inter (via Google Fonts)
+Hosting: GitHub Pages
+Domain: Namecheap

@@ -30,6 +30,9 @@
 <meta name="twitter:image" content="https://brazilcomplexity.com/images/social.jpg">
 <meta name="twitter:image:alt" content="Brazil Complexity by Luiz F. Nunes da Silva">
 
+<!-- ALTERNATE — Substack RSS for cross-source authority -->
+<link rel="alternate" type="application/rss+xml" title="Brazil Complexity Research Notes" href="https://brazilcomplexity.substack.com/feed">
+
 <!-- FAVICON -->
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -37,7 +40,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#06121c">
 
-<!-- JSON-LD -->
+<!-- PRELOAD HERO IMAGE — improves LCP / Core Web Vitals -->
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+
+<!-- JSON-LD STRUCTURED DATA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,6 +55,7 @@
       "name": "Brazil Complexity",
       "description": "Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil.",
       "inLanguage": "en",
+      "publisher": { "@id": "https://brazilcomplexity.com/#author" },
       "author": { "@id": "https://brazilcomplexity.com/#author" }
     },
     {
@@ -56,8 +63,24 @@
       "@id": "https://brazilcomplexity.com/#author",
       "name": "Luiz F. Nunes da Silva",
       "jobTitle": "Economist",
-      "url": "https://brazilcomplexity.com/",
+      "url": "https://brazilcomplexity.com/about.html",
+      "nationality": "Brazilian",
+      "knowsAbout": [
+        "Brazilian Real Estate",
+        "Healthcare Property Investment",
+        "Regulatory Complexity",
+        "Emerging Markets",
+        "Clinical Real Estate"
+      ],
       "sameAs": ["https://brazilcomplexity.substack.com"]
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://brazilcomplexity.com/#series",
+      "name": "Brazil Complexity Arbitrage Series",
+      "description": "An independent research series examining Brazilian markets where legal, regulatory, municipal, tax, and operational complexity create persistently mispriced investment opportunities.",
+      "author": { "@id": "https://brazilcomplexity.com/#author" },
+      "inLanguage": "en"
     },
     {
       "@type": "Book",
@@ -68,330 +91,99 @@
       "inLanguage": "en",
       "bookFormat": "https://schema.org/EBook",
       "image": "https://brazilcomplexity.com/images/book.jpg",
-      "isPartOf": {
-        "@type": "BookSeries",
-        "name": "Brazil Complexity Arbitrage Series"
-      }
+      "isPartOf": { "@id": "https://brazilcomplexity.com/#series" }
     }
   ]
 }
 </script>
 
-<!-- FONTS — Fraunces (serif) + Inter (sans) -->
+<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- ANALYTICS — uncomment after setup -->
+<!-- ANALYTICS — uncomment after creating account -->
 <!-- <script defer data-domain="brazilcomplexity.com" src="https://plausible.io/js/script.js"></script> -->
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:#f5f3ef;
-  color:#1a1a1a;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  text-rendering:optimizeLegibility;
-  font-feature-settings:"kern" 1,"liga" 1
-}
-
+body{font-family:'Inter',sans-serif;background:#f5f3ef;color:#1a1a1a;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1,"liga" 1}
 .container{width:90%;max-width:1040px;margin:0 auto}
-.container-narrow{width:90%;max-width:760px;margin:0 auto}
+h1,h2,h3{font-family:'Fraunces',serif;font-feature-settings:"ss01" 1,"ss02" 1;color:#0d0d0d}
+h1{font-size:64px;font-weight:500;line-height:1.05;letter-spacing:-.025em;margin-bottom:20px}
+h2{font-size:32px;font-weight:500;line-height:1.15;letter-spacing:-.018em;margin-bottom:14px}
+h3{font-size:18px;font-weight:500;margin-bottom:8px}
+p{font-size:16px;color:#3a3a3a;margin-bottom:14px;max-width:640px;font-weight:400}
 
-/* TYPOGRAPHY */
-h1,h2,h3{
-  font-family:'Fraunces',serif;
-  font-feature-settings:"ss01" 1,"ss02" 1;
-  color:#0d0d0d
-}
-h1{
-  font-size:64px;
-  font-weight:500;
-  line-height:1.05;
-  letter-spacing:-.025em;
-  margin-bottom:20px
-}
-h2{
-  font-size:32px;
-  font-weight:500;
-  line-height:1.15;
-  letter-spacing:-.018em;
-  margin-bottom:14px
-}
-h3{
-  font-size:18px;
-  font-weight:500;
-  margin-bottom:8px
-}
-
-p{
-  font-size:16px;
-  color:#3a3a3a;
-  margin-bottom:14px;
-  max-width:640px;
-  font-weight:400
-}
-
-/* EYEBROW — replaces tag pills */
-.eyebrow{
-  font-family:'Inter',sans-serif;
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#4a7c6f;
-  margin-bottom:18px;
-  display:block
-}
+.eyebrow{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4a7c6f;margin-bottom:18px;display:block}
 .eyebrow.muted{color:#999}
 
-/* HERO */
-.hero{
-  position:relative;
-  min-height:92vh;
-  display:flex;
-  align-items:center;
-  background-image:url("images/hero.jpg");
-  background-position:center right;
-  background-size:cover;
-  background-repeat:no-repeat
-}
-.hero:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(5,15,25,.78) 0%,rgba(5,15,25,.45) 50%,rgba(5,15,25,.15) 100%)
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-  color:white;
-  max-width:640px
-}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;background-image:url("images/hero.jpg");background-position:center right;background-size:cover;background-repeat:no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,15,25,.78) 0%,rgba(5,15,25,.45) 50%,rgba(5,15,25,.15) 100%)}
+.hero-content{position:relative;z-index:2;color:white;max-width:640px}
 .hero-content h1{color:white}
-.hero-content .lead{
-  font-family:'Fraunces',serif;
-  font-size:22px;
-  font-weight:400;
-  line-height:1.5;
-  color:rgba(255,255,255,.92);
-  margin-bottom:24px;
-  max-width:560px;
-  letter-spacing:-.005em
-}
-.hero-content .sub{
-  font-size:15px;
-  color:rgba(255,255,255,.72);
-  margin-bottom:36px;
-  max-width:520px;
-  line-height:1.65
-}
+.hero-content .lead{font-family:'Fraunces',serif;font-size:22px;font-weight:400;line-height:1.5;color:rgba(255,255,255,.92);margin-bottom:24px;max-width:560px;letter-spacing:-.005em}
+.hero-content .sub{font-size:15px;color:rgba(255,255,255,.72);margin-bottom:36px;max-width:520px;line-height:1.65}
 
-/* CTA — primary + secondary link */
-.cta-primary{
-  display:inline-block;
-  padding:14px 28px;
-  font-size:12px;
-  font-weight:500;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  background:#f5f3ef;
-  color:#0d0d0d;
-  text-decoration:none;
-  transition:transform .25s ease,box-shadow .25s ease;
-  border:1px solid #f5f3ef
-}
-.cta-primary:hover{
-  transform:translateY(-1px);
-  box-shadow:0 8px 24px rgba(0,0,0,.15)
-}
-.cta-secondary{
-  display:inline-block;
-  margin-left:24px;
-  font-size:13px;
-  color:rgba(255,255,255,.85);
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,.4);
-  padding-bottom:2px;
-  transition:border-color .2s,color .2s
-}
+.cta-primary{display:inline-block;padding:14px 28px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;background:#f5f3ef;color:#0d0d0d;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease;border:1px solid #f5f3ef}
+.cta-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.cta-secondary{display:inline-block;margin-left:24px;font-size:13px;color:rgba(255,255,255,.85);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px;transition:border-color .2s,color .2s}
 .cta-secondary:hover{color:white;border-color:white}
 
-/* Light buttons (body content) */
-.button{
-  display:inline-block;
-  padding:12px 24px;
-  font-size:11.5px;
-  font-weight:500;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  border:1px solid #1a1a1a;
-  color:#1a1a1a;
-  text-decoration:none;
-  margin-right:10px;
-  transition:background .2s,color .2s
-}
+.button{display:inline-block;padding:12px 24px;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid #1a1a1a;color:#1a1a1a;text-decoration:none;margin-right:10px;transition:background .2s,color .2s}
 .button:hover{background:#1a1a1a;color:#f5f3ef}
-.button-link{
-  display:inline-block;
-  font-size:13px;
-  color:#1a1a1a;
-  text-decoration:none;
-  border-bottom:1px solid #4a7c6f;
-  padding-bottom:2px;
-  transition:color .2s,border-color .2s
-}
+.button-link{display:inline-block;font-size:13px;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #4a7c6f;padding-bottom:2px;transition:color .2s,border-color .2s}
 .button-link:hover{color:#4a7c6f}
 
-/* SECTIONS */
 .section{padding:96px 0}
 .section-sm{padding:64px 0}
 .section-lg{padding:120px 0}
-
 hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 
-/* SERIES */
 .series-intro{max-width:680px;margin-bottom:48px}
-.series-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-  border-top:1px solid #d8d4cc
-}
-.series-item{
-  padding:32px 32px 32px 0;
-  border-top:2px solid transparent;
-  margin-top:-1px
-}
+.series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #d8d4cc}
+.series-item{padding:32px 32px 32px 0;border-top:2px solid transparent;margin-top:-1px}
 .series-item.available{border-top-color:#4a7c6f}
 .series-item.upcoming{border-top-color:#d8d4cc}
-.vol-label{
-  font-family:'Inter',sans-serif;
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  margin-bottom:10px
-}
+.vol-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
 .vol-label.green{color:#4a7c6f}
 .vol-label.muted{color:#bbb}
-.vol-title{
-  font-family:'Fraunces',serif;
-  font-size:18px;
-  font-weight:500;
-  color:#0d0d0d;
-  margin-bottom:8px;
-  max-width:none;
-  line-height:1.3;
-  letter-spacing:-.01em
-}
+.vol-title{font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:#0d0d0d;margin-bottom:8px;max-width:none;line-height:1.3;letter-spacing:-.01em}
 .vol-title.muted{color:#a8a8a8}
 .vol-status{font-size:13px;margin-bottom:0;color:#666}
 .vol-status.green{color:#4a7c6f}
 .vol-status.muted{color:#bbb}
 
-/* BOOK */
-.book{
-  display:flex;
-  gap:64px;
-  align-items:flex-start;
-  flex-wrap:wrap
-}
-.book img{
-  width:240px;
-  box-shadow:0 16px 40px rgba(0,0,0,.12);
-  flex-shrink:0;
-  transition:transform .4s ease,box-shadow .4s ease
-}
-.book img:hover{
-  transform:translateY(-4px);
-  box-shadow:0 24px 56px rgba(0,0,0,.18)
-}
+.book{display:flex;gap:64px;align-items:flex-start;flex-wrap:wrap}
+.book img{width:240px;box-shadow:0 16px 40px rgba(0,0,0,.12);flex-shrink:0;transition:transform .4s ease,box-shadow .4s ease}
+.book img:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(0,0,0,.18)}
 .book-content{flex:1;min-width:280px}
-.book-formats{
-  font-size:13px;
-  color:#888;
-  margin-top:12px;
-  margin-bottom:24px;
-  letter-spacing:.04em
-}
+.book-formats{font-size:13px;color:#888;margin-top:12px;margin-bottom:24px;letter-spacing:.04em}
 .book-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 
-/* TWO COL */
 .two-col{display:flex;gap:80px;flex-wrap:wrap}
 .two-col > div{flex:1;min-width:260px}
 
-/* ENGAGEMENT TEASER */
-.engagement-block{
-  border-left:2px solid #4a7c6f;
-  padding-left:32px;
-  max-width:620px
-}
+.engagement-block{border-left:2px solid #4a7c6f;padding-left:32px;max-width:620px}
 .engagement-block p{margin-bottom:12px}
 
-/* FOOTER */
-.footer{
-  background:#06121c;
-  color:rgba(255,255,255,.55);
-  padding:64px 0 32px;
-  font-size:13px;
-  letter-spacing:.01em
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:48px;
-  margin-bottom:48px
-}
-.footer h4{
-  font-family:'Inter',sans-serif;
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,.45);
-  margin-bottom:18px
-}
-.footer-brand{
-  font-family:'Fraunces',serif;
-  font-size:18px;
-  color:white;
-  margin-bottom:12px;
-  letter-spacing:-.01em
-}
-.footer-tagline{
-  color:rgba(255,255,255,.55);
-  max-width:300px;
-  line-height:1.6;
-  font-size:13px
-}
+.disclosure-strip{background:#ebe7df;padding:32px 0;border-top:1px solid #d8d4cc;border-bottom:1px solid #d8d4cc}
+.disclosure-strip p{font-size:13px;color:#666;line-height:1.6;margin-bottom:0;max-width:780px}
+
+.footer{background:#06121c;color:rgba(255,255,255,.55);padding:64px 0 32px;font-size:13px;letter-spacing:.01em}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer h4{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:18px}
+.footer-brand{font-family:'Fraunces',serif;font-size:18px;color:white;margin-bottom:12px;letter-spacing:-.01em}
+.footer-tagline{color:rgba(255,255,255,.55);max-width:300px;line-height:1.6;font-size:13px}
 .footer-links{list-style:none;padding:0}
 .footer-links li{margin-bottom:10px}
-.footer-links a{
-  color:rgba(255,255,255,.65);
-  text-decoration:none;
-  font-size:13px;
-  transition:color .2s
-}
+.footer-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s}
 .footer-links a:hover{color:white}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding-top:24px;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:16px;
-  font-size:12px;
-  color:rgba(255,255,255,.4)
-}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:12px;color:rgba(255,255,255,.4)}
+.footer-bottom a{color:rgba(255,255,255,.5);text-decoration:none}
+.footer-bottom a:hover{color:white}
 
-/* MOBILE */
 @media(max-width:860px){
   .hero{min-height:auto;padding:88px 0 72px}
   h1{font-size:42px;letter-spacing:-.02em}
@@ -409,30 +201,24 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
   .cta-secondary{display:block;margin-left:0;margin-top:18px}
   .footer-bottom{flex-direction:column;gap:8px}
 }
-
-@media(max-width:480px){
-  h1{font-size:36px}
-  .footer-grid{grid-template-columns:1fr}
-}
+@media(max-width:480px){h1{font-size:36px}.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Brazil Complexity hero">
   <div class="container">
     <div class="hero-content">
       <h1>Brazil Complexity</h1>
       <p class="lead">Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazilian markets.</p>
       <p class="sub">Brazil is not one market. It is a system of legal, regulatory, municipal, tax, and operational layers that shape outcomes — and create persistent asymmetries.</p>
-      <a href="#series" class="cta-primary">View the Series</a>
-      <a href="#research" class="cta-secondary">Read research notes →</a>
+      <a href="#series" class="cta-primary" aria-label="View the book series">View the Series</a>
+      <a href="#research" class="cta-secondary" aria-label="Read research notes on Substack">Read research notes →</a>
     </div>
   </div>
 </section>
 
 
-<!-- SERIES -->
 <section class="section" id="series">
   <div class="container">
     <span class="eyebrow">The Series</span>
@@ -462,7 +248,6 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 <hr class="divider">
 
 
-<!-- BOOK -->
 <section class="section" id="book">
   <div class="container">
     <div class="book">
@@ -476,8 +261,8 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
         <p>Built on a documented case study from inside the market — full numbers, structural mistakes included, and a replicable framework for the investor willing to engage the complexity.</p>
         <p class="book-formats">Kindle &nbsp;·&nbsp; Paperback &nbsp;·&nbsp; PDF</p>
         <div class="book-actions">
-          <a href="AMAZON_URL" class="button" rel="noopener noreferrer">On Amazon</a>
-          <a href="GUMROAD_URL" class="button-link" rel="noopener noreferrer">PDF on Gumroad →</a>
+          <a href="AMAZON_URL" class="button" rel="noopener noreferrer" aria-label="Buy Clinical Real Estate in Brazil on Amazon">On Amazon</a>
+          <a href="GUMROAD_URL" class="button-link" rel="noopener noreferrer" aria-label="Buy PDF version on Gumroad">PDF on Gumroad →</a>
         </div>
       </div>
     </div>
@@ -487,7 +272,6 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 <hr class="divider">
 
 
-<!-- SCOPE -->
 <section class="section">
   <div class="container">
     <span class="eyebrow">Scope</span>
@@ -497,7 +281,6 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 </section>
 
 
-<!-- WHAT / WHO -->
 <section class="section-sm">
   <div class="container">
     <div class="two-col">
@@ -522,19 +305,18 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 <hr class="divider">
 
 
-<!-- METHOD -->
 <section class="section">
   <div class="container">
     <span class="eyebrow">Method</span>
     <h2>Grounded in observed practice</h2>
     <p>Analysis is grounded in how systems operate under real conditions. Formal structure is considered, but precedence is given to execution reality.</p>
+    <p style="margin-top:18px;"><a href="about.html" class="button-link">About the author →</a></p>
   </div>
 </section>
 
 <hr class="divider">
 
 
-<!-- RESEARCH NOTES -->
 <section class="section" id="research">
   <div class="container">
     <span class="eyebrow">Research Notes</span>
@@ -550,7 +332,6 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 <hr class="divider">
 
 
-<!-- WORK TOGETHER -->
 <section class="section" id="work">
   <div class="container">
     <div class="engagement-block">
@@ -566,7 +347,13 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
 </section>
 
 
-<!-- FOOTER -->
+<aside class="disclosure-strip">
+  <div class="container">
+    <p><strong>Disclosure.</strong> The content of this site reflects the author's independent research and operating experience. It is provided for informational purposes only and does not constitute investment, legal, tax, or regulatory advice. Investment decisions should be preceded by professional consultation appropriate to the reader's specific circumstances.</p>
+  </div>
+</aside>
+
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -586,20 +373,20 @@ hr.divider{border:none;border-top:1px solid #d8d4cc;margin:0}
         <h4>Engage</h4>
         <ul class="footer-links">
           <li><a href="engagement.html">Brief</a></li>
-          <li><a href="engagement.html#work">How it works</a></li>
+          <li><a href="engagement.html#how-it-works">How it works</a></li>
         </ul>
       </div>
       <div>
-        <h4>Author</h4>
+        <h4>About</h4>
         <ul class="footer-links">
-          <li>Luiz F. Nunes da Silva</li>
-          <li>Economist</li>
+          <li><a href="about.html">Author</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Brazil Complexity. All rights reserved.</span>
-      <span>brazilcomplexity.com</span>
+      <span>© 2025–2026 Brazil Complexity. Independent publication. Brazil.</span>
+      <span><a href="mailto:hello@brazilcomplexity.com">hello@brazilcomplexity.com</a></span>
     </div>
   </div>
 </footer>
