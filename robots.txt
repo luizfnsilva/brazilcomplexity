@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brazilcomplexity.com/sitemap.xml
