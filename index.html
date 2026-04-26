@@ -1,23 +1,91 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- TITLE & META -->
 <title>Brazil Complexity — Independent Research on Brazilian Markets</title>
-<meta name="description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil. By Luiz F. Nunes da Silva.">
+<meta name="description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil. Books, research notes, and written analysis for investors and operators navigating the Brazilian market.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Luiz F. Nunes da Silva">
+<link rel="canonical" href="https://brazilcomplexity.com/">
 
-<meta property="og:title" content="Brazil Complexity">
-<meta property="og:description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazilian markets.">
-<meta property="og:image" content="https://brazilcomplexity.com/images/book.jpg">
-<meta property="og:url" content="https://brazilcomplexity.com">
+<!-- OPEN GRAPH — WhatsApp, LinkedIn, Facebook preview
+     IMPORTANT: create images/social.jpg at 1200x630px before launch -->
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brazil Complexity">
-<meta name="twitter:description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazilian markets.">
-<meta name="twitter:image" content="https://brazilcomplexity.com/images/book.jpg">
+<meta property="og:site_name" content="Brazil Complexity">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://brazilcomplexity.com/">
+<meta property="og:title" content="Brazil Complexity — Independent Research on Brazilian Markets">
+<meta property="og:description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil. For investors and operators who need ground-truth local intelligence.">
+<meta property="og:image" content="https://brazilcomplexity.com/images/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Brazil Complexity — Independent research on Brazilian markets by Luiz F. Nunes da Silva">
 
+<!-- TWITTER / X CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brazil Complexity — Independent Research on Brazilian Markets">
+<meta name="twitter:description" content="Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil.">
+<meta name="twitter:image" content="https://brazilcomplexity.com/images/social.jpg">
+<meta name="twitter:image:alt" content="Brazil Complexity by Luiz F. Nunes da Silva">
+
+<!-- FAVICON — generate all sizes at realfavicongenerator.net -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#06121c">
+
+<!-- JSON-LD STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://brazilcomplexity.com/#website",
+      "url": "https://brazilcomplexity.com/",
+      "name": "Brazil Complexity",
+      "description": "Independent research on regulated sectors, real assets, and jurisdictional complexity in Brazil.",
+      "inLanguage": "en",
+      "author": { "@id": "https://brazilcomplexity.com/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://brazilcomplexity.com/#author",
+      "name": "Luiz F. Nunes da Silva",
+      "jobTitle": "Economist",
+      "url": "https://brazilcomplexity.com/",
+      "sameAs": ["https://brazilcomplexity.substack.com"]
+    },
+    {
+      "@type": "Book",
+      "name": "Clinical Real Estate in Brazil",
+      "alternateName": "The Complexity Arbitrage",
+      "description": "An insider's guide to healthcare property investment in Latin America's largest market.",
+      "author": { "@id": "https://brazilcomplexity.com/#author" },
+      "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://brazilcomplexity.com/images/book.jpg",
+      "isPartOf": {
+        "@type": "BookSeries",
+        "name": "Brazil Complexity Arbitrage Series"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- PERFORMANCE — preconnect fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ANALYTICS — uncomment after creating account at plausible.io -->
+<!-- <script defer data-domain="brazilcomplexity.com" src="https://plausible.io/js/script.js"></script> -->
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#f5f3ef;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -26,69 +94,47 @@ h1,h2,h3{font-family:'Libre Baskerville',serif}
 h1{font-size:48px;font-weight:600;margin-bottom:14px;letter-spacing:-.015em}
 h2{font-size:26px;margin-bottom:10px}
 p{font-size:15.5px;color:#333;margin-bottom:10px;max-width:560px}
-
-/* Hero */
-.hero{position:relative;height:85vh;display:flex;align-items:center;background:url(‘images/hero.jpg’) center right/cover no-repeat}
-.hero:after{content:””;position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,15,25,.65) 0%,rgba(5,15,25,.3) 45%,transparent 100%)}
+.hero{position:relative;height:85vh;display:flex;align-items:center;background-image:url("images/hero.jpg");background-position:center right;background-size:cover;background-repeat:no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,15,25,.65) 0%,rgba(5,15,25,.3) 45%,transparent 100%)}
 .hero-content{position:relative;z-index:2;color:white}
 .hero-content p{color:rgba(255,255,255,.88);max-width:520px}
-
-/* Buttons */
 .button{display:inline-block;margin-top:16px;padding:10px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid white;color:white;text-decoration:none;margin-right:8px;transition:background .2s,color .2s}
 .button:hover{background:white;color:#111}
 .button.light{color:#111;border-color:#bbb}
 .button.light:hover{background:#111;color:#f5f3ef}
-
-/* Tag */
 .tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#4a7c6f;border:1px solid #4a7c6f;padding:3px 9px;margin-bottom:14px}
-
-/* Sections */
 .section{padding:48px 0}
 .section-sm{padding:28px 0}
 hr.divider{border:none;border-top:1px solid #e5e2dc}
-
-/* Series */
 .series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:24px}
-.series-item{padding:20px 24px 20px 0;border-top:2px solid #e5e2dc;margin-top:0}
+.series-item{padding:20px 24px 20px 0;border-top:2px solid #e5e2dc}
 .series-item.available{border-top-color:#4a7c6f}
 .vol-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
 .vol-label.green{color:#4a7c6f}
 .vol-label.muted{color:#bbb}
-.vol-title{font-family:‘Libre Baskerville’,serif;font-size:14px;color:#111;margin-bottom:4px;max-width:none;line-height:1.4}
+.vol-title{font-family:'Libre Baskerville',serif;font-size:14px;color:#111;margin-bottom:4px;max-width:none;line-height:1.4}
 .vol-title.muted{color:#aaa}
 .vol-status{font-size:11px;margin-bottom:0}
 .vol-status.green{color:#4a7c6f}
 .vol-status.muted{color:#bbb}
-
-/* Book */
 .book{display:flex;gap:52px;align-items:flex-start;flex-wrap:wrap}
 .book img{width:220px;box-shadow:0 12px 32px rgba(0,0,0,.10);flex-shrink:0}
-
-/* Two col */
 .two-col{display:flex;gap:64px;flex-wrap:wrap}
 .two-col > div{flex:1;min-width:220px}
-
-/* Engagement teaser */
 .engagement-block{border-left:2px solid #4a7c6f;padding-left:24px;max-width:560px}
 .engagement-block p{margin-bottom:8px}
-
-/* Footer */
 .footer{background:#06121c;color:rgba(255,255,255,.5);text-align:center;padding:36px 0;font-size:12px;letter-spacing:.04em}
-
 @media(max-width:860px){
-.hero{height:auto;padding:72px 0}
-h1{font-size:36px}
-.series-grid{grid-template-columns:1fr}
-.book,.two-col{flex-direction:column}
-.book img{width:180px}
-.series-item{padding:16px 0}
+  .hero{height:auto;padding:72px 0}
+  h1{font-size:36px}
+  .series-grid{grid-template-columns:1fr}
+  .book,.two-col{flex-direction:column}
+  .book img{width:180px}
+  .series-item{padding:16px 0}
 }
 </style>
-
 </head>
 <body>
-
-<!-- HERO -->
 
 <section class="hero">
   <div class="container">
@@ -102,8 +148,6 @@ h1{font-size:36px}
     </div>
   </div>
 </section>
-
-<!-- SERIES -->
 
 <section class="section" id="series">
   <div class="container">
@@ -131,28 +175,25 @@ h1{font-size:36px}
 
 <hr class="divider">
 
-<!-- BOOK -->
-
 <section class="section" id="book">
   <div class="container">
     <div class="book">
       <img src="images/book.jpg"
-           alt="Cover: Clinical Real Estate in Brazil — The Complexity Arbitrage, by Luiz F. Nunes da Silva">
+           alt="Cover: Clinical Real Estate in Brazil — The Complexity Arbitrage, by Luiz F. Nunes da Silva"
+           width="220" height="330" loading="eager">
       <div>
         <span class="tag">Vol. I — Available Now</span>
         <h2>Clinical Real Estate in Brazil</h2>
         <p>A structured examination of healthcare property, regulatory constraints, and clinical conversion dynamics in Brazil's private sector.</p>
         <p>Built on a documented case study from inside the market — full numbers, structural mistakes included, and a replicable framework for the investor willing to engage the complexity.</p>
         <p style="font-size:13px;color:#777;margin-top:6px;margin-bottom:0;">Kindle &nbsp;·&nbsp; 19,000 words &nbsp;·&nbsp; US$ 16.99</p>
-        <a href="AMAZON_URL" class="button light" style="margin-top:18px;">Acquire on Amazon</a>
+        <a href="AMAZON_URL" class="button light" style="margin-top:18px;" rel="noopener noreferrer">Acquire on Amazon</a>
       </div>
     </div>
   </div>
 </section>
 
 <hr class="divider">
-
-<!-- SCOPE + WHAT / WHO -->
 
 <section class="section">
   <div class="container">
@@ -182,8 +223,6 @@ h1{font-size:36px}
 
 <hr class="divider">
 
-<!-- METHOD -->
-
 <section class="section">
   <div class="container">
     <h2>Method</h2>
@@ -194,22 +233,16 @@ h1{font-size:36px}
 
 <hr class="divider">
 
-<!-- RESEARCH NOTES -->
-
 <section class="section" id="research">
   <div class="container">
     <h2>Research Notes</h2>
     <p style="max-width:580px;">Ongoing work expanding the framework into shorter analytical pieces — regulated markets, real assets, market entry, and jurisdictional asymmetries across Brazilian sectors and regions.</p>
-    <a href="https://brazilcomplexity.substack.com" class="button light" target="_blank" rel="noopener noreferrer">
-      Read on Substack
-    </a>
+    <a href="https://brazilcomplexity.substack.com" class="button light" target="_blank" rel="noopener noreferrer">Read on Substack</a>
     <p style="font-size:12px;color:#999;margin-top:14px;margin-bottom:0;">Free and paid tiers. New notes published regularly.</p>
   </div>
 </section>
 
 <hr class="divider">
-
-<!-- WORK TOGETHER -->
 
 <section class="section" id="work">
   <div class="container">
@@ -223,11 +256,9 @@ h1{font-size:36px}
   </div>
 </section>
 
-<!-- FOOTER -->
-
 <div class="footer">
-  Brazil Complexity — Independent work on structural asymmetry.<br>
-  Luiz F. Nunes da Silva
+  <p style="margin:0;color:inherit;max-width:none;">Brazil Complexity — Independent work on structural asymmetry.</p>
+  <p style="margin:6px 0 0;color:inherit;max-width:none;">Luiz F. Nunes da Silva</p>
 </div>
 
 </body>
