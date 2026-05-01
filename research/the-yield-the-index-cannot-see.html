@@ -71,6 +71,43 @@
         { "@type": "ListItem", "position": 2, "name": "Research Notes", "item": "https://brazilcomplexity.com/research/" },
         { "@type": "ListItem", "position": 3, "name": "The Yield the Index Cannot See", "item": "https://brazilcomplexity.com/research/the-yield-the-index-cannot-see.html" }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the FipeZAP index actually measure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FipeZAP tracks listing prices — what owners ask, what landlords advertise, what the public market signals as its current ambition. It does not measure transacted price, the cost of converting a generic asset into an income-justifying use, regulatory eligibility for that use, or the contractual terms under which the resulting income is earned. The index measures geometry. It does not measure income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are Brazilian commercial real estate rents rising while sale prices stay flat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rents have risen at double-digit rates over the past twelve months while sale prices have stayed effectively flat in real terms. More than seventy percent of transactions close below listed asking values. The dislocation persists because the binding constraint in Brazilian commercial real estate is not price — it is activation: the regulatory, technical, and operational work required to convert an asset into income-earning use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What regulatory variables affect Brazilian commercial real estate returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ANVISA RDC 50 compliance for healthcare facilities, municipal Vigilância Sanitária licensing timelines, zoning interpretation, and use-class permitting are among the regulatory variables that govern whether a Brazilian commercial asset can be activated for an income-justifying use. Standard underwriting templates rarely incorporate these variables, which is why returns calibrated to public benchmarks systematically miss the operational layer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why doesn't institutional capital arbitrage this gap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Institutional capital depends on observable benchmarks for portfolio construction. FipeZAP is the available reference, even if it is silent on what determines return. Standard underwriting does not incorporate Brazilian regulatory variables, and capturing the spread requires execution capacity — local architects, attorneys, brokers, tenant networks — that capital alone cannot purchase. The bottleneck is not analytical. It is operational."
+          }
+        }
+      ]
     }
   ]
 }
@@ -160,6 +197,46 @@ a:hover{border-bottom-color:#4a7c6f;text-decoration:none}
 .related-block .button-link{display:inline-block;font-size:13px;color:#1a1a1a;border-bottom:1px solid #4a7c6f;padding-bottom:2px;margin-top:14px;border:none;border-bottom:1px solid #4a7c6f}
 .related-block .button-link:hover{color:#4a7c6f;border-bottom-color:#4a7c6f}
 
+.faq-block{margin-top:24px;margin-bottom:8px}
+.faq-item{
+  border-bottom:1px solid #d8d4cc;
+  padding:18px 0;
+  transition:background .2s
+}
+.faq-item:first-child{border-top:1px solid #d8d4cc}
+.faq-item summary{
+  font-family:'Fraunces',serif;
+  font-size:17px;
+  font-weight:500;
+  color:#0d0d0d;
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  line-height:1.4
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";
+  font-family:'Inter',sans-serif;
+  font-size:24px;
+  color:#4a7c6f;
+  font-weight:300;
+  flex-shrink:0;
+  transition:transform .2s
+}
+.faq-item[open] summary::after{content:"−"}
+.faq-item summary:hover{color:#4a7c6f}
+.faq-item p{
+  margin-top:14px;
+  margin-bottom:4px;
+  font-size:16px;
+  color:#444;
+  line-height:1.7
+}
+
 .prev-note{
   border-top:1px solid #d8d4cc;
   padding:36px 0;
@@ -239,7 +316,23 @@ a:hover{border-bottom-color:#4a7c6f;text-decoration:none}
 
     <p>If this were a liquid market, rents rising at this pace would be arbitraged into prices. In Brazil, they are not. Because price is not the binding constraint. Activation is.</p>
 
-    <p>The full essay, with the data behind the divergence and a granular treatment of why the price does not transmit, is published on the Brazil Complexity Substack. The next note in the series moves to the demand side: the regulated growth in Brazil's private health insurance system, tracked through ANS data, that sustains occupancy for clinically activated assets.</p>
+    <h2>What activation actually requires</h2>
+
+    <p>To convert a generic Brazilian commercial property into an asset that justifies a clinical-tier rent, a specific sequence of work must be completed: an architectural project compliant with ANVISA RDC 50; submission to the municipal Vigilância Sanitária with a documented track record of approval in that specific jurisdiction; civil construction by contractors familiar with mechanical, electrical, and plumbing requirements that exceed standard commercial fitout; specification and procurement of clinical-grade equipment and finishes; and final inspection followed by issuance of the operational license in the tenant's name.</p>
+
+    <p>None of this is exotic. All of it is required. The investor who acquires a generic commercial property at a market-implied yield and assumes the rent will follow, without internalizing this sequence, has bought the asset but not the activation. The asset will continue to generate the cash flow of its prior use until activation occurs — which means that for the period between acquisition and completion, the investor is funding the difference. This is the gap that public benchmarks fail to price.</p>
+
+    <h2>Why this is structural, not cyclical</h2>
+
+    <p>Three forces sustain the dislocation, and none of them resolve through normal market mechanisms. Institutional capital requires observable benchmarks; FipeZAP exists, even if its methodology cannot capture activation. Underwriting templates evolve slowly and rarely incorporate Brazilian regulatory variables, which means foreign capital deployed against Brazilian commercial real estate consistently underestimates the gap between acquisition and income generation. And the execution layer — architects with clinical project track record, contractors who pass first-submission inspection, attorneys with transaction history in the relevant municipal jurisdiction — does not scale at the speed capital does.</p>
+
+    <p>The implication is that the spread between rental growth and capital values will not close through the normal mechanism of price discovery. It will close only when individual investors capture activation themselves, asset by asset, position by position. That is not arbitrage compression. It is sequential extraction. And the rate at which it occurs is bounded by execution capacity, not by capital availability — which is why the opportunity persists despite being theoretically observable.</p>
+
+    <h2>The implications for portfolio construction</h2>
+
+    <p>For an investor evaluating Brazilian commercial real estate, the practical consequence is methodological. Yield projected against FipeZAP-implied capital values overstates returns systematically, because the index undercounts the cost of activation embedded in any income-generating asset. Yield projected against activated comparable properties — clinical, professional, regulated-use commercial — captures the true economic return but requires data that does not exist in any public dataset. The investor either accepts an analytical framework that is structurally biased, or builds a private one. There is no third option offered by the available benchmarks.</p>
+
+    <p>The full essay, with the data behind the divergence and a granular treatment of why the price does not transmit, is published on the Brazil Complexity Substack. The next note in the series moves to the demand side: the regulated growth in Brazil's private health insurance system, tracked through ANS data, that sustains occupancy for clinically activated assets. The asset-level evidence underlying both notes is detailed in <a href="../index.html#book">Volume I</a>.</p>
 
 
     <div class="cta-block">
@@ -251,9 +344,34 @@ a:hover{border-bottom-color:#4a7c6f;text-decoration:none}
     </div>
 
 
+    <h2>Common questions</h2>
+
+    <div class="faq-block">
+      <details class="faq-item">
+        <summary>What does the FipeZAP index actually measure?</summary>
+        <p>FipeZAP tracks listing prices — what owners ask, what landlords advertise, what the public market signals as its current ambition. It does not measure transacted price, the cost of converting a generic asset into an income-justifying use, regulatory eligibility for that use, or the contractual terms under which the resulting income is earned. The index measures geometry. It does not measure income.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why are Brazilian commercial real estate rents rising while sale prices stay flat?</summary>
+        <p>Rents have risen at double-digit rates over the past twelve months while sale prices have stayed effectively flat in real terms. More than seventy percent of transactions close below listed asking values. The dislocation persists because the binding constraint in Brazilian commercial real estate is not price — it is activation: the regulatory, technical, and operational work required to convert an asset into income-earning use.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What regulatory variables affect Brazilian commercial real estate returns?</summary>
+        <p>ANVISA RDC 50 compliance for healthcare facilities, municipal Vigilância Sanitária licensing timelines, zoning interpretation, and use-class permitting are among the regulatory variables that govern whether a Brazilian commercial asset can be activated for an income-justifying use. Standard underwriting templates rarely incorporate these variables, which is why returns calibrated to public benchmarks systematically miss the operational layer.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why doesn't institutional capital arbitrage this gap?</summary>
+        <p>Institutional capital depends on observable benchmarks for portfolio construction. FipeZAP is the available reference, even if it is silent on what determines return. Standard underwriting does not incorporate Brazilian regulatory variables, and capturing the spread requires execution capacity — local architects, attorneys, brokers, tenant networks — that capital alone cannot purchase. The bottleneck is not analytical. It is operational.</p>
+      </details>
+    </div>
+
+
     <div class="related-block">
       <h3>About Volume I</h3>
-      <p>The full underwriting, regulatory sequence, and tenant structuring behind the Rua Koesa case — referenced throughout this series as the asset-level evidence of the activation thesis — are detailed in <em>Clinical Real Estate in Brazil</em>, Volume I of the Brazil Complexity Arbitrage Series.</p>
+      <p>The full underwriting, regulatory sequence, and tenant structuring behind the Rua Koesa case — referenced throughout this series as the asset-level evidence of the activation thesis — are detailed in <em>Clinical Real Estate in Brazil</em>, Volume I of the Brazil Complexity Arbitrage Series. For investors and operators evaluating a specific commercial real estate situation in Brazil, the <a href="../engagement.html">Brazil Complexity Brief</a> applies this framework to confidential written analysis. Background on the author is on the <a href="../about.html">About</a> page.</p>
       <a href="../index.html#book" class="button-link">View Volume I →</a>
     </div>
 
