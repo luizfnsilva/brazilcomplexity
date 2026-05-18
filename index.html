@@ -60,7 +60,7 @@
           "@type": "EntryPoint",
           "urlTemplate": "https://brazilcomplexity.com/research/?q={search_term_string}"
         },
-        "query-input": "required name=search_term_string"
+        "query-input": {"@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string"}
       }
     },
     {
