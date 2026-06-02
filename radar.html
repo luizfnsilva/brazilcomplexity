@@ -135,56 +135,6 @@ strong{color:#0d0d0d;font-weight:500}
 
 /* WIDGET WRAPPER — styled to brazilcomplexity identity */
 .widget-section{padding:48px 0;background:#ebe7df;border-bottom:1px solid #d8d4cc}
-/* Radar Perene dashboard — brazilcomplexity identity */
-.mp{
-  --bg:#06121c; --card:#0e2030; --card2:#13263a; --line:#1e3340; --txt:#f5f3ef; --dim:#8ba3a0;
-  --accent:#a89a78; --hot:#c97a5a; --warm:#c9a86a; --cool:#4a7c6f; --neu:#5a6b72;
-  --font:'Inter',system-ui,-apple-system,sans-serif;
-  background:var(--bg); color:var(--txt); font-family:var(--font);
-  max-width:860px; margin:0 auto; padding:32px; border-radius:4px;
-  border:1px solid var(--line); line-height:1.5;
-}
-.mp h2{font-family:'Fraunces',serif;font-size:21px;margin:0 0 4px;font-weight:500;letter-spacing:-.01em;color:#fff}
-.mp h3{font-family:'DM Mono',monospace;font-size:10px;margin:22px 0 10px;color:var(--dim);text-transform:uppercase;letter-spacing:.18em;font-weight:500}
-.mp .sub{color:var(--dim);font-size:12.5px;line-height:1.5}
-.mp .row{display:grid;gap:12px}
-.mp .r3{grid-template-columns:repeat(3,1fr)}
-.mp .r2{grid-template-columns:repeat(2,1fr)}
-.mp .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-@media(max-width:640px){.mp .r3,.mp .grid{grid-template-columns:1fr 1fr}.mp .r2{grid-template-columns:1fr}}
-.mp .card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:14px}
-.mp .k{font-size:11px;color:var(--dim);letter-spacing:.02em}
-.mp .big{font-family:'Fraunces',serif;font-size:24px;font-weight:600;margin-top:3px;color:#f5f3ef}
-.mp .reg{font-size:11px;font-weight:400;margin-top:3px}
-.mp .t{background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--neu);border-radius:4px;padding:10px 11px}
-.mp .t .nm{font-size:12px;font-weight:500;color:#e6ebe9}
-.mp .t .vl{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:#fff}
-.mp .t .rg{font-size:10.5px;color:var(--dim)}
-.mp .chip{display:inline-flex;gap:5px;align-items:baseline;background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:12px;margin:0 5px 6px 0}
-.mp .chip b{font-weight:600;color:#f5f3ef;font-family:'DM Mono',monospace}
-.mp .chip .u{color:var(--dim);font-size:10px}
-.mp .hl{background:linear-gradient(180deg,#13263a,#0e2030);border:1px solid var(--accent);border-radius:4px;padding:18px}
-.mp .hl .q{font-size:13px;color:var(--dim);margin-bottom:10px;line-height:1.5}
-.mp .hl .stat{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline}
-.mp .hl .v{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--accent)}
-.mp .hl .d{font-size:12.5px}
-.mp ul.dv{margin:6px 0 0;padding:0;list-style:none}
-.mp ul.dv li{font-size:12.5px;padding:7px 0;border-top:1px solid var(--line);color:var(--dim)}
-.mp ul.dv li b{color:var(--accent);font-family:'DM Mono',monospace}
-.mp .hip{background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:14px;font-size:12.5px;line-height:1.55;color:#cdd6d4}
-.mp .hip .ec{color:var(--dim);margin-top:8px}
-.mp .hip .ec b{color:var(--accent)}
-.mp .prem{margin-top:20px;background:var(--card);border:1px dashed var(--line);border-radius:4px;padding:16px}
-.mp .prem .pt{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
-.mp .prem ul{margin:10px 0 0;padding-left:16px;color:var(--dim);font-size:12px}
-.mp .prem ul li{margin:4px 0}
-.mp .cta{display:block;text-align:center;margin-top:18px;background:var(--accent);color:#06121c;text-decoration:none;font-family:'DM Mono',monospace;font-weight:500;padding:14px;border-radius:4px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s}
-.mp .cta:hover{opacity:.88}
-.mp .disc{color:var(--dim);font-size:10.5px;margin-top:14px;text-align:center;line-height:1.5}
-.mp .hot{border-left-color:var(--hot)}
-.mp .warm{border-left-color:var(--warm)}
-.mp .cool{border-left-color:var(--cool)}
-.mp .lo{color:var(--dim)}
 .widget-caption{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.04em;color:#888;text-align:center;margin-top:18px}
 
 /* TWO BRAINS */
@@ -262,13 +212,7 @@ strong{color:#0d0d0d;font-weight:500}
   <div class="container">
     <span class="eyebrow" style="justify-content:center;">Live now</span>
 
-    <div class="mp" id="mp">
-      <h2 id="mp-h2">Radar Perene · live reading</h2>
-      <div class="sub" id="mp-intro">In-house regime-reading instrument for Brazil's regulatory and market environment. Loading today's data…</div>
-      <div id="mp-body"></div>
-      <a class="cta" id="mp-cta" href="#" rel="nofollow noopener">Get history &amp; alerts — notify me at launch</a>
-      <div class="disc" id="mp-disc"></div>
-    </div>
+    <iframe src="/radar-embed.html?lang=en" style="width:100%;border:1px solid #1e3340;border-radius:4px;min-height:1250px;display:block;background:#06121c" loading="lazy" title="Radar Perene — live reading"></iframe>
 
     <p class="widget-caption">Live data from the Radar Perene engine · educational content, public sources</p>
   </div>
@@ -349,57 +293,12 @@ strong{color:#0d0d0d;font-weight:500}
 </footer>
 
 <script>
+// Page-level CTA ("Request early access") — mailto built at runtime (anti-harvesting).
+// The widget itself lives in the same-origin iframe (radar-embed.html).
 (function(){
-  var BASE="https://zcjtkgltrxdnlacezpny.supabase.co/functions/v1/radar-api";
-  var LANG="en";
-  var T={intro:"In-house regime-reading instrument for Brazil's regulatory and market environment. As of",
-    regime:"Today's regime",macro:"Essential macro (public data)",term:"9 thermometers (Vértice)",
-    analog:"Analog study",div:"Divergences detected today",extras:"Breadth · geographic · judicial",
-    hip:"How the engine reasons (sample hypothesis)",contra:"Contradiction",
-    br:"Brazil",gl:"Global",inter:"BR intermarket",bus:"US breadth",bbr:"BR breadth",geo:"Geographic risk-on",jud:"Judicial highlight",
-    medianN:"median",analogs:"analogs",vsbase:"vs base-rate",hit:"hit-rate"};
-  function el(id){return document.getElementById(id)}
-  function esc(s){return String(s==null?"":s).replace(/[<>&]/g,function(c){return{"<":"&lt;",">":"&gt;","&":"&amp;"}[c]})}
-  function cls(v){if(v==null)return "";return v>=75?"hot":v>=55?"warm":v<=25?"cool":v<=45?"cool":""}
-  function card(k,score,reg){return '<div class="card"><div class="k">'+esc(k)+'</div><div class="big">'+(score==null?"—":esc(score))+'</div><div class="reg lo">'+esc(reg)+'</div></div>'}
-
-  // mailto built at runtime (email kept out of raw HTML → anti-harvesting). No form/endpoint.
-  (function(){
-    var u="hello",dom="brazilcomplexity"+"."+"com";
-    var href="mailto:"+u+"@"+dom+"?subject="+encodeURIComponent("Radar Perene — early access");
-    var c=el("mp-cta"); if(c)c.setAttribute("href",href);
-    var a=el("access-cta"); if(a)a.setAttribute("href",href);
-  })();
-
-  fetch(BASE+"/v1/digest?lang="+LANG).then(function(r){return r.json()}).then(function(d){
-    var rr=d.radar||{}, v=d.vertice||{}, h="";
-    el("mp-intro").textContent=T.intro+" "+(d.data_referencia||"—")+".";
-    if(rr.regime){var g=rr.regime;h+='<h3>'+T.regime+'</h3><div class="row r3">'+
-      card(T.br,(g.brasil||{}).score,(g.brasil||{}).regime)+card(T.gl,(g.global||{}).score,(g.global||{}).regime)+
-      card(T.inter,(g.br_intermercado||{}).score,(g.br_intermercado||{}).regime)+'</div>';}
-    if(rr.macro_essencial&&rr.macro_essencial.length){h+='<h3>'+T.macro+'</h3><div>'+
-      rr.macro_essencial.map(function(m){return '<span class="chip"><b>'+esc(m.valor)+'</b> <span class="u">'+esc(m.unidade)+'</span> '+esc(m.nome)+'</span>'}).join("")+'</div>';}
-    if(v.termometros){h+='<h3>'+T.term+'</h3><div class="grid">'+v.termometros.map(function(t){
-      return '<div class="t '+cls(t.valor)+'"><div class="nm">'+esc(t.nome)+'</div><div class="vl">'+(t.valor==null?'<span class="lo">—</span>':esc(t.valor))+'</div><div class="rg">'+esc(t.regime)+'</div></div>'}).join("")+'</div>';}
-    if(v.estudo_analogo){var a=v.estudo_analogo;h+='<h3>'+T.analog+'</h3><div class="hl"><div class="q">'+esc(a.pergunta)+'</div>'+
-      '<div class="stat"><div><div class="v">'+esc(a.mediana_ret_pct)+'%</div><div class="d lo">'+T.medianN+' ('+esc(a.n_analogos)+' '+T.analogs+')</div></div>'+
-      '<div><div class="v">'+(a.delta_pp>=0?'+':'')+esc(a.delta_pp)+'pp</div><div class="d lo">'+T.vsbase+' '+esc(a.base_rate_pct)+'%</div></div>'+
-      '<div><div class="v">'+esc(a.hit_rate_pct)+'%</div><div class="d lo">'+T.hit+'</div></div></div>'+
-      '<div class="sub" style="margin-top:10px">'+esc(a.leitura)+'</div></div>';}
-    if(v.divergencias&&v.divergencias.length){h+='<h3>'+T.div+'</h3><ul class="dv">'+
-      v.divergencias.map(function(x){return '<li><b>'+esc(x.codigo)+'</b> · '+esc(x.leitura)+'</li>'}).join("")+'</ul>';}
-    var ex=[];
-    if(v.breadth){if(v.breadth.us)ex.push(card(T.bus,v.breadth.us.valor+'%',v.breadth.us.regime));if(v.breadth.br)ex.push(card(T.bbr,v.breadth.br.valor+'%',v.breadth.br.regime));}
-    if(v.geo_riskon)ex.push(card(T.geo,v.geo_riskon.valor,v.geo_riskon.regime));
-    if(rr.contexto_judicial&&rr.contexto_judicial.destaque){var j=rr.contexto_judicial.destaque;ex.push(card(T.jud+': '+esc(j.gaveta),j.z,j.tema));}
-    if(ex.length){h+='<h3>'+T.extras+'</h3><div class="grid">'+ex.join("")+'</div>';}
-    if(v.hipotese_exemplo&&v.hipotese_exemplo.hipotese){var hp=v.hipotese_exemplo;h+='<h3>'+T.hip+'</h3><div class="hip">'+esc(hp.hipotese)+
-      '<div class="ec"><b>'+T.contra+':</b> '+esc(hp.evidencia_contra)+'</div></div>';}
-    if(d.premium){h+='<div class="prem"><div class="pt">'+esc(d.premium.titulo)+'</div><ul>'+
-      (d.premium.itens||[]).map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>';}
-    el("mp-body").innerHTML=h;
-    if(d.disclaimer)el("mp-disc").textContent=d.disclaimer[LANG]||d.disclaimer.en||d.disclaimer.pt;
-  }).catch(function(e){el("mp-body").innerHTML='<div class="sub">unavailable at the moment.</div>'});
+  var u="hello",dom="brazilcomplexity"+"."+"com";
+  var href="mailto:"+u+"@"+dom+"?subject="+encodeURIComponent("Radar Perene - early access");
+  var a=document.getElementById("access-cta"); if(a)a.setAttribute("href",href);
 })();
 </script>
 
