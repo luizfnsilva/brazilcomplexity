@@ -103,18 +103,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Brazil Complexity?",
+          "name": "What is the Brazil Complexity Brief?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Brazil Complexity is an independent research and advisory platform focused on Brazil's operational layer: market entry, real assets, regulated sectors, municipal execution, partner risk, and jurisdictional complexity."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is Brazil Complexity for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Brazil Complexity is for foreign investors, family offices, operators, founders, advisors, and professionals evaluating Brazil beyond macro headlines and generic market reports."
+            "text": "A fixed-scope written analysis of a specific Brazil-related decision — a municipality, an asset, a sector, or an entry thesis — delivered as a focused memorandum. It identifies the hidden variables, local complexities, and operational realities that materially affect the outcome. Not an open-ended retainer, not a legal opinion, not a regulated investment recommendation."
           }
         },
         {
@@ -122,15 +114,7 @@
           "name": "Is Brazil one market for foreign investors?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Brazil operates through federal, state, municipal, regulatory, tax, contractual, and professional layers. The investment case often depends on how those layers interact in a specific place, asset, sector, or transaction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does Brazil Complexity offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Brazil Complexity publishes books, permanent research essays, and fixed-scope written advisory briefs for specific Brazil-related decisions."
+            "text": "No. Brazil operates through federal, state, municipal, regulatory, tax, contractual, and professional layers. The investment case often depends on how those layers interact in a specific place, asset, sector, or transaction — not on the national average that macro research describes."
           }
         }
       ]
@@ -371,6 +355,82 @@ hr.divider{border:none;border-top:1px solid var(--rule);margin:0}
 .site-nav.hero-visible .nav-cta{border-color:rgba(255,255,255,.6);color:white}
 .nav-cta:hover{background:var(--ink);color:var(--parchment)}
 .site-nav.hero-visible .nav-cta:hover{background:white;color:var(--ink)}
+
+/* ── APPLIED STRIP (How the work is applied) ─────────────── */
+.applied-strip{
+  background:var(--navy);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:0;
+}
+.applied-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+}
+.applied-step{
+  padding:44px 40px;
+  border-right:1px solid rgba(255,255,255,.07);
+  position:relative;
+  transition:background var(--transition-med);
+}
+.applied-step:last-child{border-right:none}
+.applied-step:hover{background:rgba(255,255,255,.02)}
+.applied-num{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.2em;
+  color:var(--sage);
+  margin-bottom:14px;
+  display:block;
+}
+.applied-step h3{
+  font-family:'Fraunces',serif;
+  font-size:20px;
+  font-weight:500;
+  color:white;
+  margin-bottom:8px;
+  letter-spacing:-.015em;
+}
+.applied-step p{
+  font-size:14px;
+  color:rgba(255,255,255,.6);
+  line-height:1.6;
+  margin-bottom:14px;
+  max-width:none;
+}
+.applied-step a{
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  letter-spacing:.06em;
+  color:rgba(255,255,255,.8);
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);
+  padding-bottom:2px;
+  transition:color var(--transition-fast),border-color var(--transition-fast);
+}
+.applied-step a:hover{color:white;border-color:white}
+.applied-step .price-tag{
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  color:var(--sage);
+  letter-spacing:.04em;
+}
+@media(max-width:780px){
+  .applied-grid{grid-template-columns:1fr}
+  .applied-step{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);padding:32px 24px}
+  .applied-step:last-child{border-bottom:none}
+}
+
+/* ── FROM ANALYSIS TO DECISION ───────────────────────────── */
+.decision-bridge{
+  background:var(--parchment-dark);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.decision-bridge .container{padding:8px 0}
+.decision-bridge h2{margin-bottom:14px}
+.decision-bridge p{max-width:600px;margin-bottom:22px}
 
 /* ── HERO ───────────────────────────────────────────────── */
 .hero{
@@ -903,12 +963,13 @@ details.home-faq p{
   <div class="container nav-inner">
     <a href="/" class="nav-brand">Brazil Complexity</a>
     <ul class="nav-links">
-      <li><a href="start-here.html">Start Here</a></li>
       <li><a href="research/">Research</a></li>
-      <li><a href="books/clinical-real-estate-in-brazil.html">Volume I</a></li>
+      <li><a href="brief.html">Brief</a></li>
+      <li><a href="radar.html">Radar</a></li>
+      <li><a href="books/clinical-real-estate-in-brazil.html">Book</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
-    <a href="engagement.html" class="nav-cta">Request a Brief</a>
+    <a href="brief.html" class="nav-cta">Request a Brief</a>
   </div>
 </nav>
 
@@ -919,8 +980,8 @@ details.home-faq p{
       <p class="lead">It is 5,570 jurisdictions, each implementing the same federal framework with materially different timelines, administrative capacities, and operational realities.</p>
       <p class="sub">Independent research and written analysis for foreign investors, family offices and operators evaluating Brazil — focused on the operational layer that determines whether deals succeed or fail beneath the macro narrative.</p>
       <div class="hero-actions">
-        <a href="books/clinical-real-estate-in-brazil.html" class="cta-primary" aria-label="Read Volume I — Clinical Real Estate in Brazil"><span>Read Volume I</span></a>
-        <a href="engagement.html" class="cta-secondary" aria-label="Request a Brazil Complexity Brief">Request a Brief →</a>
+        <a href="brief.html" class="cta-primary" aria-label="Request a Brazil Complexity Brief"><span>Request a Brief</span></a>
+        <a href="research/" class="cta-secondary" aria-label="Read the research">Read the research →</a>
       </div>
     </div>
   </div>
@@ -931,26 +992,129 @@ details.home-faq p{
 </section>
 
 
+<section class="applied-strip" aria-label="How the work is applied">
+  <div class="container">
+    <div class="applied-grid">
+      <div class="applied-step">
+        <span class="applied-num">01 — Research</span>
+        <h3>Understand the framework</h3>
+        <p>Independent analysis of Brazil's operational layer — the variables that determine outcomes beneath the macro narrative.</p>
+        <a href="research/">Read the research →</a>
+      </div>
+      <div class="applied-step">
+        <span class="applied-num">02 — Brief</span>
+        <h3>Apply it to a decision</h3>
+        <p>A focused written analysis of your specific situation — municipality, asset, sector, or entry thesis. <span class="price-tag">From US$490.</span></p>
+        <a href="brief.html">Request a Brief →</a>
+      </div>
+      <div class="applied-step">
+        <span class="applied-num">03 — Engagements</span>
+        <h3>Sustained analysis</h3>
+        <p>For complex situations beyond a single Brief. Selected engagements, by evaluation only.</p>
+        <a href="engagement.html">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow reveal">Scope</span>
+    <h2 class="reveal delay-1">What this work covers</h2>
+    <p class="reveal delay-2">Focus is placed on regulated sectors where jurisdictional fragmentation and operational constraints materially affect outcomes — and where that complexity is systematically mispriced by capital without local intelligence.</p>
+  </div>
+</section>
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow muted">Not</span>
+        <h3>What this is not</h3>
+        <p>Not macro commentary.</p>
+        <p>Not generalized research.</p>
+        <p>Not advisory at scale.</p>
+      </div>
+      <div class="reveal delay-2">
+        <span class="eyebrow">For</span>
+        <h3>Who this is for</h3>
+        <p>Foreign investors evaluating regulated exposure in Brazil.</p>
+        <p>Operators navigating local execution constraints.</p>
+        <p>Professionals who need ground-truth interpretation, not market reports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="section" id="work">
+  <div class="container">
+    <div class="engagement-block reveal" id="engagementBlock">
+      <span class="eyebrow">Brazil Complexity Brief</span>
+      <h2>Independent written analysis for a specific decision</h2>
+      <p>Before capital is committed. Before a municipality is chosen. Before a structure is finalized.</p>
+      <p>A focused analytical memorandum on the decision you are evaluating — the hidden variables, local complexities, and operational realities that materially affect the outcome.</p>
+      <div style="margin-top:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+        <a href="brief.html" class="button"><span>Request a Brief — US$490</span></a>
+        <a href="brief.html" class="button-link">How it works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow reveal">Method</span>
+    <h2 class="reveal delay-1">Grounded in observed practice</h2>
+    <p class="reveal delay-2">Analysis is grounded in how systems operate under real conditions. Formal structure is considered, but precedence is given to execution reality.</p>
+    <p style="margin-top:18px;" class="reveal delay-3"><a href="about.html" class="button-link">About the author →</a></p>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="section" id="research">
+  <div class="container">
+    <span class="eyebrow reveal">Research Notes</span>
+    <h2 class="reveal delay-1">Ongoing analysis</h2>
+    <p class="reveal delay-2">Shorter pieces expanding the framework into adjacent topics — regulated markets, real assets, market entry, and jurisdictional asymmetries across Brazilian sectors and regions.</p>
+    <div style="margin-top:32px;" class="reveal delay-3">
+      <a href="research/" class="button"><span>Browse Notes</span></a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;"><a href="research/brazil-market-entry/" style="font-size:11.5px;color:#4a7c6f;text-decoration:none;border-bottom:1px solid rgba(74,124,111,.3);padding-bottom:1px;">Market Entry</a><span style="color:#d8d4cc;font-size:11px;margin:0 2px;">·</span><a href="research/brazil-real-estate/" style="font-size:11.5px;color:#4a7c6f;text-decoration:none;border-bottom:1px solid rgba(74,124,111,.3);padding-bottom:1px;">Real Estate</a><span style="color:#d8d4cc;font-size:11px;margin:0 2px;">·</span><a href="research/clinical-real-estate/" style="font-size:11.5px;color:#4a7c6f;text-decoration:none;border-bottom:1px solid rgba(74,124,111,.3);padding-bottom:1px;">Clinical Real Estate</a><span style="color:#d8d4cc;font-size:11px;margin:0 2px;">·</span><a href="research/complexity-arbitrage/" style="font-size:11.5px;color:#4a7c6f;text-decoration:none;border-bottom:1px solid rgba(74,124,111,.3);padding-bottom:1px;">Complexity Arbitrage</a></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
+<section class="section" id="radar-teaser" style="background:#0e2030;color:white;">
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(255,255,255,.6);">Radar Perene · Pre-launch</span>
+    <h2 style="color:white;">A live regime-reading instrument</h2>
+    <p style="color:rgba(255,255,255,.75);">Built in-house: a descriptive, data-driven reading of Brazil's regulatory and market environment — the operational intelligence layer behind the research. Now in live preview.</p>
+    <div style="margin-top:28px;">
+      <a href="radar.html" style="display:inline-block;padding:13px 28px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:#a89a78;color:#06121c;text-decoration:none;">See the live Radar →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+
 <section class="section" id="series">
   <div class="container">
     <span class="eyebrow reveal">Brazil Complexity Arbitrage Series</span>
     <h2 class="reveal delay-1">The Series</h2>
     <p class="series-intro reveal delay-2">Each volume isolates a sector or entry theme where Brazil's legal, regulatory, municipal, and operational complexity creates durable pricing inefficiencies — and documents the framework for navigating them.</p>
-
-    <div class="stats-row reveal delay-3">
-      <div class="stat-item">
-        <span class="stat-number" data-count="5570">0</span>
-        <span class="stat-label">Brazilian municipalities</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-count="1">1</span>
-        <span class="stat-label">Volume published</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-count="14">14</span>
-        <span class="stat-label">Research articles</span>
-      </div>
-    </div>
 
     <div class="series-grid" style="margin-top:56px;">
       <div class="series-item available reveal delay-1">
@@ -1001,104 +1165,6 @@ details.home-faq p{
 
 <hr class="divider">
 
-<section class="section" id="book-vol2">
-  <div class="container">
-    <div class="book">
-      <div class="book-image-wrap reveal" style="opacity:.35;filter:grayscale(25%)">
-        <img src="images/book.jpg"
-             alt="Cover: Brazil Market Entry — Volume II of the Brazil Complexity Arbitrage Series, by Luiz F. Nunes da Silva"
-             width="240" height="360" loading="lazy">
-      </div>
-      <div class="book-content reveal delay-2">
-        <span class="eyebrow muted">Volume II &nbsp;·&nbsp; Coming Soon</span>
-        <h2>Brazil Market Entry</h2>
-        <p>The framework that teaches foreign investors to read Brazil's operational layer before capital is committed. Not market research. Entry analysis.</p>
-        <p>The macro case for Brazil brings the investor to the table. This volume builds the analytical sequence that converts a validated thesis into an executable deal — through municipality, professional stack, partner architecture, structure, and filter discipline.</p>
-        <p style="font-size:13px;color:var(--ink-faint);margin-top:6px;margin-bottom:28px;font-family:'DM Mono',monospace;letter-spacing:.04em;">Manuscript complete. Final design and cover in production.</p>
-        <div class="book-actions">
-          <a href="books/brazil-market-entry.html" class="button" aria-label="Preview Volume II"><span>Preview the Framework</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-
-<section class="section">
-  <div class="container">
-    <span class="eyebrow reveal">Scope</span>
-    <h2 class="reveal delay-1">What this work covers</h2>
-    <p class="reveal delay-2">Focus is placed on regulated sectors where jurisdictional fragmentation and operational constraints materially affect outcomes — and where that complexity is systematically mispriced by capital without local intelligence.</p>
-  </div>
-</section>
-
-
-<section class="section-sm">
-  <div class="container">
-    <div class="two-col">
-      <div class="reveal">
-        <span class="eyebrow muted">Not</span>
-        <h3>What this is not</h3>
-        <p>Not macro commentary.</p>
-        <p>Not generalized research.</p>
-        <p>Not advisory at scale.</p>
-      </div>
-      <div class="reveal delay-2">
-        <span class="eyebrow">For</span>
-        <h3>Who this is for</h3>
-        <p>Foreign investors evaluating regulated exposure in Brazil.</p>
-        <p>Operators navigating local execution constraints.</p>
-        <p>Professionals who need ground-truth interpretation, not market reports.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-
-<section class="section">
-  <div class="container">
-    <span class="eyebrow reveal">Method</span>
-    <h2 class="reveal delay-1">Grounded in observed practice</h2>
-    <p class="reveal delay-2">Analysis is grounded in how systems operate under real conditions. Formal structure is considered, but precedence is given to execution reality.</p>
-    <p style="margin-top:18px;" class="reveal delay-3"><a href="about.html" class="button-link">About the author →</a></p>
-  </div>
-</section>
-
-<hr class="divider">
-
-
-<section class="section" id="research">
-  <div class="container">
-    <span class="eyebrow reveal">Research Notes</span>
-    <h2 class="reveal delay-1">Ongoing analysis</h2>
-    <p class="reveal delay-2">Shorter pieces expanding the framework into adjacent topics — regulated markets, real assets, market entry, and jurisdictional asymmetries across Brazilian sectors and regions.</p>
-    <div style="margin-top:32px;" class="reveal delay-3">
-      <a href="research/" class="button"><span>Browse Notes</span></a>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-
-<section class="section" id="work">
-  <div class="container">
-    <div class="engagement-block reveal" id="engagementBlock">
-      <span class="eyebrow">Brazil Complexity Brief</span>
-      <h2>Work on a specific situation</h2>
-      <p>Confidential written analysis for foreign investors, operators, advisors, and family offices evaluating market entry, regulatory exposure, partnership structure, or real-asset opportunities in Brazil.</p>
-      <p>Engagements are scoped individually across four categories: market entry, regulatory and municipal complexity, real asset execution, and operator and partner risk.</p>
-      <div style="margin-top:28px;">
-        <a href="engagement.html" class="button-link">See how it works →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <aside class="disclosure-strip">
   <div class="container">
@@ -1113,23 +1179,13 @@ details.home-faq p{
     <div style="margin-top:40px;max-width:700px;">
 
       <details class="home-faq reveal delay-2">
-        <summary>What is Brazil Complexity?<span class="faq-icon">+</span></summary>
-        <p>An independent research and advisory platform focused on Brazil's operational layer: market entry, real assets, regulated sectors, municipal execution, partner risk, and jurisdictional complexity. It publishes books, permanent research essays, and fixed-scope written advisory briefs for specific Brazil-related decisions.</p>
+        <summary>What is the Brazil Complexity Brief?<span class="faq-icon">+</span></summary>
+        <p>A fixed-scope written analysis of a specific Brazil-related decision — a municipality, an asset, a sector, or an entry thesis — delivered as a focused memorandum. It identifies the hidden variables, local complexities, and operational realities that materially affect the outcome. Not an open-ended retainer, not a legal opinion, not a regulated investment recommendation.</p>
       </details>
 
       <details class="home-faq reveal delay-3">
-        <summary>Who is this for?<span class="faq-icon">+</span></summary>
-        <p>Foreign investors, family offices, operators, founders, advisors, and professionals evaluating Brazil beyond macro headlines and generic market reports. Specifically: those whose decisions depend on the operational layer — municipality, regulatory compliance, partner alignment, asset activation, and structure — not just the country thesis.</p>
-      </details>
-
-      <details class="home-faq reveal delay-4">
         <summary>Is Brazil one market for foreign investors?<span class="faq-icon">+</span></summary>
         <p>No. Brazil operates through federal, state, municipal, regulatory, tax, contractual, and professional layers. The investment case often depends on how those layers interact in a specific place, asset, sector, or transaction — not on the national average that macro research describes.</p>
-      </details>
-
-      <details class="home-faq">
-        <summary>What is the Brazil Complexity Brief?<span class="faq-icon">+</span></summary>
-        <p>A fixed-scope written advisory brief for foreign investors, operators, family offices, and advisors evaluating a specific Brazil-related decision before capital or operational resources are committed. It is closest to specialized Brazil market-entry consulting, but delivered as confidential written analysis — not an open-ended retainer, not a legal opinion, not a regulated investment recommendation.</p>
       </details>
 
     </div>
@@ -1147,16 +1203,17 @@ details.home-faq p{
       <div>
         <h3>The Work</h3>
         <ul class="footer-links">
-          <li><a href="start-here.html">Start Here</a></li>
+          <li><a href="research/">Research Notes</a></li>
+          <li><a href="radar.html">Radar Perene</a></li>
           <li><a href="books/clinical-real-estate-in-brazil.html">Volume I</a></li>
           <li><a href="books/brazil-market-entry.html">Volume II</a></li>
-          <li><a href="research/">Research Notes</a></li>
         </ul>
       </div>
       <div>
         <h3>Engage</h3>
         <ul class="footer-links">
-          <li><a href="engagement.html">Brazil Complexity Brief</a></li>
+          <li><a href="brief.html">Brazil Complexity Brief</a></li>
+          <li><a href="engagement.html">Engagements</a></li>
         </ul>
       </div>
       <div>
