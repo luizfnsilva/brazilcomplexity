@@ -135,6 +135,13 @@ strong{color:#0d0d0d;font-weight:500}
 
 /* WIDGET WRAPPER — styled to brazilcomplexity identity */
 .widget-section{padding:48px 0;background:#ebe7df;border-bottom:1px solid #d8d4cc}
+/* Radar Perene widget (radar.js) — themed to brazilcomplexity identity */
+#radar-perene{
+  --rp-accent:#a89a78;
+  --rp-bg:#06121c; --rp-txt:#f5f3ef; --rp-card:#0e2030; --rp-card2:#13263a;
+  --rp-line:#1e3340; --rp-dim:#8ba3a0; --rp-font:'Inter',system-ui,sans-serif;
+  --rp-radius:4px; --rp-max:860px;
+}
 .widget-caption{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.04em;color:#888;text-align:center;margin-top:18px}
 
 /* TWO BRAINS */
@@ -202,7 +209,7 @@ strong{color:#0d0d0d;font-weight:500}
   <div class="container">
     <span class="eyebrow">What it is</span>
     <h2>A reading of the regime, not a set of tips</h2>
-    <p>Radar Perene is a regulatory and market intelligence instrument for understanding Brazil's operational environment. Where most tools offer signals, Radar Perene reads the environment <strong>descriptively</strong>, from public data — monitoring Brazil's risk regime and the global one, regulatory and judicial activity across electoral, tax, real estate, succession and criminal domains, and the intermarket picture.</p>
+    <p>Radar Perene is a regulatory and market intelligence instrument for understanding Brazil's operational environment. Where most tools offer signals, Radar Perene reads the environment <strong>descriptively</strong>, from public data — monitoring Brazil's risk regime and the global one, regulatory and judicial activity across electoral, tax, real estate, and succession domains, and the intermarket picture.</p>
     <p>It shows what is happening, with depth that scales from the basic to the advanced. It is the same operational layer that informs the research published here — now instrumented.</p>
   </div>
 </section>
@@ -212,7 +219,8 @@ strong{color:#0d0d0d;font-weight:500}
   <div class="container">
     <span class="eyebrow" style="justify-content:center;">Live now</span>
 
-    <iframe src="/radar-embed.html?lang=en" style="width:100%;border:1px solid #1e3340;border-radius:4px;min-height:1250px;display:block;background:#06121c" loading="lazy" title="Radar Perene — live reading"></iframe>
+    <div id="radar-perene" data-lang="en"></div>
+    <script src="https://radarperene.com/radar.js" defer></script>
 
     <p class="widget-caption">Live data from the Radar Perene engine · educational content, public sources</p>
   </div>
@@ -232,7 +240,7 @@ strong{color:#0d0d0d;font-weight:500}
       <div class="brain">
         <span class="tag">Vértice · experimental</span>
         <h3>Risk thermometers</h3>
-        <p>In the spirit of a Brazilian SentimenTrader × Lead-Lag Report: nine risk thermometers — AI bubble, crypto liquidity, sovereign debt stress, commodities, currency, rare earths — with cross-asset correlations, statistical testing, and historical-analogue studies.</p>
+        <p>In the spirit of institutional sentiment and cross-market lead-lag analysis: nine risk thermometers — AI bubble, crypto liquidity, sovereign debt stress, commodities, currency, rare earths — with cross-asset correlations, statistical testing, and historical-analogue studies.</p>
       </div>
     </div>
   </div>
@@ -294,7 +302,7 @@ strong{color:#0d0d0d;font-weight:500}
 
 <script>
 // Page-level CTA ("Request early access") — mailto built at runtime (anti-harvesting).
-// The widget itself lives in the same-origin iframe (radar-embed.html).
+// The widget itself is served by radarperene.com (radar.js).
 (function(){
   var u="hello",dom="brazilcomplexity"+"."+"com";
   var href="mailto:"+u+"@"+dom+"?subject="+encodeURIComponent("Radar Perene - early access");
