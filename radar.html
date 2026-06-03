@@ -119,14 +119,13 @@ strong{color:#0d0d0d;font-weight:500}
 @media(max-width:680px){.nav-links{display:none}}
 
 /* HERO */
-.radar-hero{background:#06121c;color:white;padding:80px 0 72px;position:relative;overflow:hidden}
-.radar-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 25%,rgba(74,124,111,.16),transparent 62%);pointer-events:none}
-.radar-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(6,18,28,.4));pointer-events:none}
+.radar-hero{background:#0a1822;color:white;padding:96px 0 84px;position:relative;overflow:hidden}
+.radar-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 18%,rgba(74,124,111,.08),transparent 70%);pointer-events:none}
 .radar-hero .container{position:relative;z-index:1}
 .radar-hero h1{color:white}
-.radar-hero .lead{font-family:'Fraunces',serif;font-size:20px;font-style:italic;font-weight:400;color:rgba(255,255,255,.85);line-height:1.5;margin-bottom:8px;max-width:580px;letter-spacing:-.008em}
-.radar-hero .status{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a89a78;margin-top:20px;display:inline-flex;align-items:center;gap:8px}
-.radar-hero .status::before{content:"";width:7px;height:7px;border-radius:50%;background:#a89a78;display:inline-block;animation:pulse 2s ease-in-out infinite}
+.radar-hero .lead{font-family:'Fraunces',serif;font-size:21px;font-style:italic;font-weight:400;color:rgba(255,255,255,.78);line-height:1.55;margin-bottom:8px;max-width:600px;letter-spacing:-.008em}
+.radar-hero .status{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,168,136,.85);margin-top:24px;display:inline-flex;align-items:center;gap:9px}
+.radar-hero .status::before{content:"";width:5px;height:5px;border-radius:50%;background:#b8a888;display:inline-block;animation:pulse 3.5s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
 /* SECTIONS */
@@ -134,15 +133,17 @@ strong{color:#0d0d0d;font-weight:500}
 .section:last-of-type{border-bottom:none}
 
 /* WIDGET WRAPPER — styled to brazilcomplexity identity */
-.widget-section{padding:48px 0;background:#ebe7df;border-bottom:1px solid #d8d4cc}
+.widget-section{padding:72px 0;background:#f5f3ef}
+.widget-frame{max-width:880px;margin:0 auto;padding:6px;background:#0a1822;border:1px solid #d8d4cc}
 /* Radar Perene widget (radar.js) — themed to brazilcomplexity identity */
 #radar-perene{
-  --rp-accent:#a89a78;
-  --rp-bg:#06121c; --rp-txt:#f5f3ef; --rp-card:#0e2030; --rp-card2:#13263a;
-  --rp-line:#1e3340; --rp-dim:#8ba3a0; --rp-font:'Inter',system-ui,sans-serif;
-  --rp-radius:4px; --rp-max:860px;
+  --rp-accent:#b8a888;
+  --rp-bg:#0a1822; --rp-txt:#eceae4; --rp-card:#0f2330; --rp-card2:#13283a;
+  --rp-line:#22323e; --rp-dim:#7e9490; --rp-font:'Inter',system-ui,sans-serif;
+  --rp-radius:0px; --rp-max:880px;
 }
-.widget-caption{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.04em;color:#888;text-align:center;margin-top:18px}
+.widget-caption{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#a8a097;text-align:center;margin-top:24px}
+.widget-caption a{color:#4a7c6f;border-bottom:1px solid rgba(74,124,111,.3)}
 
 /* TWO BRAINS */
 .brains{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border-top:1px solid #d8d4cc;border-left:1px solid #d8d4cc}
@@ -158,10 +159,11 @@ strong{color:#0d0d0d;font-weight:500}
 .principles strong{color:#0d0d0d}
 
 /* CTA STRIP */
-.access-strip{background:#0e2030;color:white;padding:48px 0}
-.access-strip h2{color:white;font-size:23px;margin-bottom:12px}
-.access-strip p{color:rgba(255,255,255,.72);font-size:15.5px;max-width:560px;margin-bottom:22px}
-.access-btn{display:inline-block;padding:14px 32px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:#a89a78;color:#06121c;text-decoration:none;transition:opacity .2s}
+.access-strip{background:#0a1822;color:white;padding:64px 0}
+.access-strip h2{color:white;font-size:24px;margin-bottom:12px}
+.access-strip p{color:rgba(255,255,255,.68);font-size:15.5px;max-width:560px;margin-bottom:26px}
+.access-btn{display:inline-block;padding:15px 34px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;background:transparent;color:#b8a888;border:1px solid rgba(184,168,136,.5);text-decoration:none;transition:border-color .25s,color .25s}
+.access-btn:hover{border-color:#b8a888;color:#cdbf9f}
 .access-btn:hover{opacity:.9}
 
 /* FAQ */
@@ -219,10 +221,12 @@ strong{color:#0d0d0d;font-weight:500}
   <div class="container">
     <span class="eyebrow" style="justify-content:center;">Live now</span>
 
-    <div id="radar-perene" data-lang="en"></div>
-    <script src="https://radarperene.com/radar.js" defer></script>
+    <div class="widget-frame">
+      <div id="radar-perene" data-lang="en"></div>
+      <script src="https://radarperene.com/radar.js" defer></script>
+    </div>
 
-    <p class="widget-caption">Live data from <a href="https://radarperene.com" target="_blank" rel="noopener" style="color:#4a7c6f;border-bottom:1px solid rgba(74,124,111,.3);">Radar Perene</a> · educational content, public sources · updates automatically</p>
+    <p class="widget-caption">Live data from <a href="https://radarperene.com" target="_blank" rel="noopener">Radar Perene</a> · educational content, public sources · updates automatically</p>
   </div>
 </section>
 
