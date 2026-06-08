@@ -1,12 +1,14 @@
 # Brazil Complexity — robots.txt
-# Site is openly crawlable. AI/LLM bots are explicitly welcomed
+# Site is openly crawlable. AI / LLM bots are explicitly welcomed
 # to read, cite, and reference content with proper attribution.
+#
+# AI-readable index: https://brazilcomplexity.com/llms.txt
+# Full content export: https://brazilcomplexity.com/llms-full.txt
+# Framework reference: https://brazilcomplexity.com/framework.html
 
 # Default — all crawlers allowed
 User-agent: *
 Allow: /
-
-# AI / LLM crawlers — explicitly permitted
 
 # OpenAI
 User-agent: GPTBot
@@ -25,11 +27,20 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
 # Google (Gemini, AI Overviews)
 User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 # Perplexity
@@ -64,6 +75,32 @@ Allow: /
 
 # Cohere
 User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# xAI
+User-agent: xAI-Bot
+Allow: /
+
+User-agent: Grok
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Diffbot (research/extraction)
+User-agent: Diffbot
+Allow: /
+
+# Allow Ahrefs to fully crawl for SEO health checks
+User-agent: AhrefsBot
 Allow: /
 
 Sitemap: https://brazilcomplexity.com/sitemap.xml

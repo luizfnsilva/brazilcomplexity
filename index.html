@@ -60,7 +60,7 @@
           "@type": "EntryPoint",
           "urlTemplate": "https://brazilcomplexity.com/research/?q={search_term_string}"
         },
-        "query-input": {"@type": "PropertyValueSpecification", "valueRequired": true, "valueName": "search_term_string"}
+        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -69,7 +69,7 @@
       "name": "Luiz F. Nunes da Silva",
       "jobTitle": "Economist",
       "url": "https://brazilcomplexity.com/about.html",
-      "nationality": "Brazilian",
+      "nationality": { "@type": "Country", "name": "Brazil" },
       "knowsAbout": [
         "Brazilian Real Estate",
         "Healthcare Property Investment",
@@ -77,7 +77,7 @@
         "Emerging Markets",
         "Clinical Real Estate"
       ],
-      "sameAs": ["https://brazilcomplexity.com/about.html","https://www.amazon.com/author/luizfnsilva"]
+      "sameAs": ["https://www.amazon.com/author/luizfnsilva"]
     },
     {
       "@type": "BookSeries",
@@ -85,18 +85,32 @@
       "name": "Brazil Complexity Arbitrage Series",
       "description": "An independent research series examining Brazilian markets where legal, regulatory, municipal, tax, and operational complexity create persistently mispriced investment opportunities.",
       "author": { "@id": "https://brazilcomplexity.com/#author" },
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "numberOfBooks": 1,
+      "hasPart": { "@id": "https://brazilcomplexity.com/#book-clinical-real-estate" }
     },
     {
       "@type": "Book",
+      "@id": "https://brazilcomplexity.com/#book-clinical-real-estate",
       "name": "Clinical Real Estate in Brazil",
       "alternateName": "The Complexity Arbitrage",
       "description": "An insider's guide to healthcare property investment in Latin America's largest market.",
       "author": { "@id": "https://brazilcomplexity.com/#author" },
       "inLanguage": "en",
-      "bookFormat": "https://schema.org/EBook",
+      "url": "https://brazilcomplexity.com/books/clinical-real-estate-in-brazil.html",
       "image": "https://brazilcomplexity.com/images/book.jpg",
-      "isPartOf": { "@id": "https://brazilcomplexity.com/#series" }
+      "isPartOf": { "@id": "https://brazilcomplexity.com/#series" },
+      "workExample": {
+        "@type": "Book",
+        "@id": "https://brazilcomplexity.com/#book-clinical-real-estate-ebook",
+        "bookFormat": "https://schema.org/EBook",
+        "inLanguage": "en",
+        "url": "https://brazilcomplexity.com/books/clinical-real-estate-in-brazil.html",
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": "https://brazilcomplexity.com/books/clinical-real-estate-in-brazil.html"
+        }
+      }
     },
     {
       "@type": "FAQPage",
@@ -964,6 +978,7 @@ details.home-faq p{
     <a href="/" class="nav-brand">Brazil Complexity</a>
     <ul class="nav-links">
       <li><a href="research/">Research</a></li>
+      <li><a href="framework.html">Framework</a></li>
       <li><a href="brief.html">Brief</a></li>
       <li><a href="radar.html">Radar</a></li>
       <li><a href="books/clinical-real-estate-in-brazil.html">Book</a></li>
@@ -1204,6 +1219,7 @@ details.home-faq p{
         <h3>The Work</h3>
         <ul class="footer-links">
           <li><a href="research/">Research Notes</a></li>
+          <li><a href="framework.html">Framework</a></li>
           <li><a href="radar.html">Radar Perene</a></li>
           <li><a href="books/clinical-real-estate-in-brazil.html">Volume I</a></li>
           <li><a href="books/brazil-market-entry.html">Volume II</a></li>
