@@ -210,4 +210,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+   <url>
+    <loc>https://brazilcomplexity.com/research/hidden-cost-regulatory-geography-brazil/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://brazilcomplexity.com/research/why-due-diligence-not-enough-brazil/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   </urlset>
