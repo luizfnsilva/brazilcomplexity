@@ -104,3 +104,6 @@ User-agent: AhrefsBot
 Allow: /
 
 Sitemap: https://brazilcomplexity.com/sitemap.xml
+
+# RSS feed for new research discovery
+# https://brazilcomplexity.com/feed.xml
