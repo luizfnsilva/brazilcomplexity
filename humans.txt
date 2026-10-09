@@ -3,7 +3,10 @@
 Author: Luiz F. Nunes da Silva
 Role: Economist · Writer · Researcher · Investor in regulated assets
 Location: Brazil
-Contact: hello [at] brazilcomplexity.com
+Contact: hello [at] brazilcomplexity.com (work inquiries)
+Studio: https://luizfnunesdasilva.studio/
+LinkedIn: https://www.linkedin.com/in/luiz-f-nunes-da-silva-801472414
+ORCID: https://orcid.org/0009-0002-5409-7074
 Substack: brazilcomplexity.substack.com
 
 /* SITE */
@@ -11,7 +14,6 @@ Substack: brazilcomplexity.substack.com
 Name: Brazil Complexity
 Description: Independent research and written analysis on the operational layer of Brazilian markets — the level at which foreign-investor deals actually succeed or fail beneath the macro narrative.
 Framework: https://brazilcomplexity.com/framework.html
-Reading path: https://brazilcomplexity.com/start-here.html
 Language: English
 Doctype: HTML5
 Authoring: Direct, hand-written, no CMS
@@ -31,4 +33,4 @@ Analytics: Google Analytics
 
 /* LAST UPDATED */
 
-2026-06-08
+2026-10-09

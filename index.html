@@ -53,8 +53,8 @@
       "name": "Brazil Complexity",
       "description": "Independent research on Brazil market entry, regulated sectors, real assets, and jurisdictional complexity in Brazilian markets.",
       "inLanguage": "en",
-      "publisher": { "@id": "https://brazilcomplexity.com/#author" },
-      "author": { "@id": "https://brazilcomplexity.com/#author" },
+      "publisher": { "@id": "https://brazilcomplexity.com/#org" },
+      "author": { "@id": "https://luizfnunesdasilva.studio/#person" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -66,10 +66,11 @@
     },
     {
       "@type": "Person",
-      "@id": "https://brazilcomplexity.com/#author",
+      "@id": "https://luizfnunesdasilva.studio/#person",
       "name": "Luiz F. Nunes da Silva",
       "jobTitle": "Economist",
       "url": "https://brazilcomplexity.com/about.html",
+      "affiliation": { "@id": "https://luizfnunesdasilva.studio/#studio" },
       "nationality": { "@type": "Country", "name": "Brazil" },
       "knowsAbout": [
         "Brazilian Real Estate",
@@ -78,14 +79,31 @@
         "Emerging Markets",
         "Clinical Real Estate"
       ],
-      "sameAs": ["https://www.amazon.com/author/luizfnsilva"]
+      "sameAs": ["https://luizfnunesdasilva.studio/", "https://www.linkedin.com/in/luiz-f-nunes-da-silva-801472414", "https://orcid.org/0009-0002-5409-7074", "https://www.amazon.com/author/luizfnsilva"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://brazilcomplexity.com/#org",
+      "name": "Brazil Complexity",
+      "url": "https://brazilcomplexity.com/",
+      "email": "mailto:hello@brazilcomplexity.com",
+      "logo": "https://brazilcomplexity.com/images/icon.png",
+      "founder": { "@id": "https://luizfnunesdasilva.studio/#person" },
+      "parentOrganization": { "@id": "https://luizfnunesdasilva.studio/#studio" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://luizfnunesdasilva.studio/#studio",
+      "name": "Luiz F. Nunes da Silva Studio",
+      "url": "https://luizfnunesdasilva.studio/",
+      "founder": { "@id": "https://luizfnunesdasilva.studio/#person" }
     },
     {
       "@type": "BookSeries",
       "@id": "https://brazilcomplexity.com/#series",
       "name": "Brazil Complexity Arbitrage Series",
       "description": "An independent research series examining Brazilian markets where legal, regulatory, municipal, tax, and operational complexity create persistently mispriced investment opportunities.",
-      "author": { "@id": "https://brazilcomplexity.com/#author" },
+      "author": { "@id": "https://luizfnunesdasilva.studio/#person" },
       "inLanguage": "en",
       "numberOfBooks": 1,
       "hasPart": { "@id": "https://brazilcomplexity.com/#book-clinical-real-estate" }
@@ -96,7 +114,7 @@
       "name": "Clinical Real Estate in Brazil",
       "alternateName": "The Complexity Arbitrage",
       "description": "An insider's guide to healthcare property investment in Latin America's largest market.",
-      "author": { "@id": "https://brazilcomplexity.com/#author" },
+      "author": { "@id": "https://luizfnunesdasilva.studio/#person" },
       "inLanguage": "en",
       "url": "https://brazilcomplexity.com/books/clinical-real-estate-in-brazil.html",
       "image": "https://brazilcomplexity.com/images/book.jpg",
@@ -116,14 +134,6 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the Brazil Complexity Brief?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A fixed-scope written analysis of a specific Brazil-related decision — a municipality, an asset, a sector, or an entry thesis — delivered as a focused memorandum. It identifies the hidden variables, local complexities, and operational realities that materially affect the outcome. Not an open-ended retainer, not a legal opinion, not a regulated investment recommendation."
-          }
-        },
         {
           "@type": "Question",
           "name": "Is Brazil one market for foreign investors?",
@@ -371,71 +381,6 @@ hr.divider{border:none;border-top:1px solid var(--rule);margin:0}
 .nav-cta:hover{background:var(--ink);color:var(--parchment)}
 .site-nav.hero-visible .nav-cta:hover{background:white;color:var(--ink)}
 
-/* ── APPLIED STRIP (How the work is applied) ─────────────── */
-.applied-strip{
-  background:var(--navy);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  padding:0;
-}
-.applied-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-}
-.applied-step{
-  padding:44px 40px;
-  border-right:1px solid rgba(255,255,255,.07);
-  position:relative;
-  transition:background var(--transition-med);
-}
-.applied-step:last-child{border-right:none}
-.applied-step:hover{background:rgba(255,255,255,.02)}
-.applied-num{
-  font-family:'DM Mono',monospace;
-  font-size:10px;
-  font-weight:500;
-  letter-spacing:.2em;
-  color:var(--sage);
-  margin-bottom:14px;
-  display:block;
-}
-.applied-step h3{
-  font-family:'Fraunces',serif;
-  font-size:20px;
-  font-weight:500;
-  color:white;
-  margin-bottom:8px;
-  letter-spacing:-.015em;
-}
-.applied-step p{
-  font-size:14px;
-  color:rgba(255,255,255,.6);
-  line-height:1.6;
-  margin-bottom:14px;
-  max-width:none;
-}
-.applied-step a{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  letter-spacing:.06em;
-  color:rgba(255,255,255,.8);
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,.25);
-  padding-bottom:2px;
-  transition:color var(--transition-fast),border-color var(--transition-fast);
-}
-.applied-step a:hover{color:white;border-color:white}
-.applied-step .price-tag{
-  font-family:'DM Mono',monospace;
-  font-size:11px;
-  color:var(--sage);
-  letter-spacing:.04em;
-}
-@media(max-width:780px){
-  .applied-grid{grid-template-columns:1fr}
-  .applied-step{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);padding:32px 24px}
-  .applied-step:last-child{border-bottom:none}
-}
 
 /* ── FROM ANALYSIS TO DECISION ───────────────────────────── */
 .decision-bridge{
@@ -980,12 +925,11 @@ details.home-faq p{
     <ul class="nav-links">
       <li><a href="research/">Research</a></li>
       <li><a href="framework.html">Framework</a></li>
-      <li><a href="brief.html">Brief</a></li>
       <li><a href="radar.html">Radar</a></li>
       <li><a href="books/clinical-real-estate-in-brazil.html">Book</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
-    <a href="brief.html" class="nav-cta">Request a Brief</a>
+    <a href="about.html#contact" class="nav-cta">Work inquiries</a>
   </div>
 </nav>
 
@@ -996,8 +940,8 @@ details.home-faq p{
       <p class="lead">It is 5,570 jurisdictions, each implementing the same federal framework with materially different timelines, administrative capacities, and operational realities.</p>
       <p class="sub">Independent research and written analysis for foreign investors, family offices and operators evaluating Brazil — focused on the operational layer that determines whether deals succeed or fail beneath the macro narrative.</p>
       <div class="hero-actions">
-        <a href="brief.html" class="cta-primary" aria-label="Request a Brazil Complexity Brief"><span>Request a Brief</span></a>
-        <a href="research/" class="cta-secondary" aria-label="Read the research">Read the research →</a>
+        <a href="research/" class="cta-primary" aria-label="Read the research"><span>Read the research</span></a>
+        <a href="about.html#contact" class="cta-secondary" aria-label="Work inquiries">Work inquiries →</a>
       </div>
     </div>
   </div>
@@ -1008,30 +952,6 @@ details.home-faq p{
 </section>
 
 
-<section class="applied-strip" aria-label="How the work is applied">
-  <div class="container">
-    <div class="applied-grid">
-      <div class="applied-step">
-        <span class="applied-num">01 — Research</span>
-        <h3>Understand the framework</h3>
-        <p>Independent analysis of Brazil's operational layer — the variables that determine outcomes beneath the macro narrative.</p>
-        <a href="research/">Read the research →</a>
-      </div>
-      <div class="applied-step">
-        <span class="applied-num">02 — Brief</span>
-        <h3>Apply it to a decision</h3>
-        <p>A focused written analysis of your specific situation — municipality, asset, sector, or entry thesis. <span class="price-tag">From US$490.</span></p>
-        <a href="brief.html">Request a Brief →</a>
-      </div>
-      <div class="applied-step">
-        <span class="applied-num">03 — Engagements</span>
-        <h3>Sustained analysis</h3>
-        <p>For complex situations beyond a single Brief. Selected engagements, by evaluation only.</p>
-        <a href="engagement.html">Learn more →</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
@@ -1070,13 +990,14 @@ details.home-faq p{
 <section class="section" id="work">
   <div class="container">
     <div class="engagement-block reveal" id="engagementBlock">
-      <span class="eyebrow">Brazil Complexity Brief</span>
-      <h2>Independent written analysis for a specific decision</h2>
-      <p>Before capital is committed. Before a municipality is chosen. Before a structure is finalized.</p>
-      <p>A focused analytical memorandum on the decision you are evaluating — the hidden variables, local complexities, and operational realities that materially affect the outcome.</p>
+      <span class="eyebrow">The author</span>
+      <h2>Written by Luiz F. Nunes da Silva, founder of luizfnunesdasilva.studio</h2>
+      <p>Independent research, self-funded, grounded in direct operating experience in Brazil's regulated real assets.</p>
+      <p>Interested in working together? Write to <a href="mailto:hello@brazilcomplexity.com">hello@brazilcomplexity.com</a>.</p>
       <div style="margin-top:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
-        <a href="brief.html" class="button"><span>Request a Brief — US$490</span></a>
-        <a href="brief.html" class="button-link">How it works →</a>
+        <a href="mailto:hello@brazilcomplexity.com?subject=work" class="button"><span>Work inquiries</span></a>
+        <a href="https://luizfnunesdasilva.studio/" class="button-link">luizfnunesdasilva.studio →</a>
+        <a href="https://www.linkedin.com/in/luiz-f-nunes-da-silva-801472414" class="button-link">LinkedIn →</a>
       </div>
     </div>
   </div>
@@ -1195,12 +1116,8 @@ details.home-faq p{
     <h2 class="reveal delay-1">About Brazil Complexity</h2>
     <div style="margin-top:40px;max-width:700px;">
 
-      <details class="home-faq reveal delay-2">
-        <summary>What is the Brazil Complexity Brief?<span class="faq-icon">+</span></summary>
-        <p>A fixed-scope written analysis of a specific Brazil-related decision — a municipality, an asset, a sector, or an entry thesis — delivered as a focused memorandum. It identifies the hidden variables, local complexities, and operational realities that materially affect the outcome. Not an open-ended retainer, not a legal opinion, not a regulated investment recommendation.</p>
-      </details>
 
-      <details class="home-faq reveal delay-3">
+      <details class="home-faq reveal delay-2">
         <summary>Is Brazil one market for foreign investors?<span class="faq-icon">+</span></summary>
         <p>No. Brazil operates through federal, state, municipal, regulatory, tax, contractual, and professional layers. The investment case often depends on how those layers interact in a specific place, asset, sector, or transaction — not on the national average that macro research describes.</p>
       </details>
@@ -1228,23 +1145,24 @@ details.home-faq p{
         </ul>
       </div>
       <div>
-        <h3>Engage</h3>
+        <h3>Work</h3>
         <ul class="footer-links">
-          <li><a href="start-here.html">How It Works</a></li>
-          <li><a href="brief.html">Brazil Complexity Brief</a></li>
-          <li><a href="engagement.html">Engagements</a></li>
+          <li><a href="mailto:hello@brazilcomplexity.com?subject=work">hello@brazilcomplexity.com</a></li>
+          <li><a href="about.html#contact">Work inquiries</a></li>
         </ul>
       </div>
       <div>
         <h3>About</h3>
         <ul class="footer-links">
           <li><a href="about.html">Author</a></li>
+          <li><a href="https://luizfnunesdasilva.studio/">luizfnunesdasilva.studio</a></li>
+          <li><a href="https://www.linkedin.com/in/luiz-f-nunes-da-silva-801472414">LinkedIn</a></li>
           <li><a href="privacy.html">Privacy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025–2026 Brazil Complexity. Independent publication. Brazil.</span>
+      <span>© 2025–2026 Brazil Complexity. A project of <a href="https://luizfnunesdasilva.studio/" style="color:inherit;">luizfnunesdasilva.studio</a>. Brazil.</span>
       <span><a href="mailto:hello@brazilcomplexity.com">hello@brazilcomplexity.com</a></span>
     </div>
   </div>
