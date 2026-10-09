@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alternative Data in Brazil | Brazil Complexity</title>
+<meta name="description" content="Brazil publishes an unusual amount of public data about companies, properties, courts, licensing and health. The scarce input is not data. It is reading it at the resolution of one deal.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Luiz F. Nunes da Silva">
+<link rel="alternate" type="application/rss+xml" title="Brazil Complexity — Research" href="https://brazilcomplexity.com/feed.xml">
+<link rel="canonical" href="https://brazilcomplexity.com/research/brazil-alternative-data-operational-risk-analytics.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Brazil Complexity">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://brazilcomplexity.com/research/brazil-alternative-data-operational-risk-analytics.html">
+<meta property="og:title" content="Alternative Data in Brazil: Where the Operational Signals Actually Live">
+<meta property="og:description" content="Brazil publishes an unusual amount of public data about companies, properties, courts, licensing and health. The scarce input is not data. It is reading it at the resolution of one deal.">
+<meta property="og:image" content="https://brazilcomplexity.com/images/social.jpg">
+<meta property="article:author" content="Luiz F. Nunes da Silva">
+<meta property="article:tag" content="Brazil alternative data, Brazil risk analytics, operational analytics Brazil, public data Brazil, CNPJ open data, CNES, ANS data, court records Brazil, Radar Perene">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alternative Data in Brazil">
+<meta name="twitter:description" content="Brazil publishes an unusual amount of public data about companies, properties, courts, licensing and health. The scarce input is not data. It is reading it at the resolution of one deal.">
+<meta name="twitter:image" content="https://brazilcomplexity.com/images/social.jpg">
+
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#06121c">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Alternative Data in Brazil: Where the Operational Signals Actually Live",
+      "description": "Brazil publishes an unusual amount of public data about companies, properties, courts, licensing and health. The scarce input is not data. It is reading it at the resolution of one deal.",
+      "author":{"@type":"Person","@id":"https://luizfnunesdasilva.studio/#person","name":"Luiz F. Nunes da Silva", "url": "https://brazilcomplexity.com/about.html" },
+      "publisher": { "@type": "Organization", "name": "Brazil Complexity", "url": "https://brazilcomplexity.com/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://brazilcomplexity.com/research/brazil-alternative-data-operational-risk-analytics.html" },
+      "image": "https://brazilcomplexity.com/images/social.jpg",
+      "articleSection": "Research",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://brazilcomplexity.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Research Notes", "item": "https://brazilcomplexity.com/research/" },
+        { "@type": "ListItem", "position": 3, "name": "Alternative Data in Brazil", "item": "https://brazilcomplexity.com/research/brazil-alternative-data-operational-risk-analytics.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What public data is available for due diligence in Brazil?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The federal company registry as open data, property titles and certificates from the Registry of Deeds, public case search in state and federal courts, municipal transparency portals and official gazettes, the national registry of health establishments, and the supplementary health regulator's data on operators and beneficiaries by municipality." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is alternative data in Brazil expensive or restricted?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most of the sources that describe the operational layer are public and free. The cost is in knowing which source answers which question and reading it at the level of one municipality or counterparty, which is interpretive work rather than data acquisition." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between regime-level and deal-level risk analytics?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Regime-level analytics read public series descriptively to characterize the environment, as Radar Perene does daily. Deal-level analytics read public records for one place, one asset and one counterparty. Both use public data; they answer different questions." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGYDZ8BR8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FGYDZ8BR8E');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#f5f3ef;color:#1a1a1a;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.container{width:90%;max-width:720px;margin:0 auto}
+h1,h2,h3{font-family:'Fraunces',serif;color:#0d0d0d}
+h1{font-size:42px;font-weight:500;line-height:1.15;letter-spacing:-.022em;margin-bottom:24px}
+h2{font-size:24px;font-weight:500;line-height:1.25;letter-spacing:-.015em;margin-bottom:14px;margin-top:48px}
+p{font-size:17.5px;color:#222;margin-bottom:22px;line-height:1.78}
+p.intro{font-size:19px;color:#444;line-height:1.65}
+a{color:#4a7c6f;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+a:hover{border-bottom-color:#4a7c6f}
+.eyebrow{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#4a7c6f;margin-bottom:18px;display:block}
+.nav{padding:28px 0;border-bottom:1px solid #d8d4cc}
+.nav .container{max-width:1040px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:#0d0d0d;text-decoration:none;letter-spacing:-.01em;border:none}
+.nav-back{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#888;text-decoration:none;border:none}
+.nav-back:hover{color:#1a1a1a;border:none}
+.breadcrumb{padding:16px 0 0;font-size:12px;color:#888;max-width:720px;margin:0 auto;width:90%}
+.breadcrumb a{color:#888;border:none}
+.breadcrumb a:hover{color:#4a7c6f;border:none}
+.breadcrumb-sep{margin:0 8px;color:#ccc}
+.article-header{padding:48px 0 32px}
+.article-meta{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.article-meta .note-number{color:#4a7c6f;font-weight:500}
+.article-body{padding:0 0 48px}
+.cta-block{background:#06121c;color:white;padding:40px 36px;margin:48px 0}
+.cta-block .eyebrow{color:rgba(255,255,255,.55)}
+.cta-block h3{font-family:'Fraunces',serif;color:white;font-size:22px;font-weight:500;margin-bottom:10px;line-height:1.3}
+.cta-block p{color:rgba(255,255,255,.78);font-size:15.5px;margin-bottom:18px}
+.cta-block a{color:white;border-bottom:1px solid rgba(255,255,255,.5);font-size:13px;letter-spacing:.04em}
+.cta-block a:hover{border-bottom-color:white}
+.cta-block a + a{margin-left:24px}
+.related-block{background:#ebe7df;padding:36px 32px;margin:48px 0 0;border-top:1px solid #d8d4cc;border-bottom:1px solid #d8d4cc}
+.related-block h3{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#888;margin-bottom:16px}
+.related-block p{margin-bottom:8px;font-size:15px}
+.related-block .button-link{display:inline-block;font-size:13px;color:#1a1a1a;border-bottom:1px solid #4a7c6f;padding-bottom:2px;margin-top:14px}
+.faq-block{margin-top:24px;margin-bottom:8px}
+.faq-item{border-bottom:1px solid #d8d4cc;padding:18px 0}
+.faq-item:first-child{border-top:1px solid #d8d4cc}
+.faq-item summary{font-family:'Fraunces',serif;font-size:17px;font-weight:500;color:#0d0d0d;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.4}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Inter',sans-serif;font-size:24px;color:#4a7c6f;font-weight:300;flex-shrink:0}
+.faq-item[open] summary::after{content:"−"}
+.faq-item summary:hover{color:#4a7c6f}
+.faq-item p{margin-top:14px;margin-bottom:4px;font-size:16px;color:#444;line-height:1.7}
+.footer{background:#06121c;color:rgba(255,255,255,.4);text-align:center;padding:32px 0;font-size:12px;letter-spacing:.02em;margin-top:32px}
+.footer a{color:rgba(255,255,255,.5);border:none}
+.footer a:hover{color:white;border:none}
+@media(max-width:720px){
+  h1{font-size:32px}
+  h2{font-size:22px}
+  p{font-size:16.5px}
+  p.intro{font-size:17px}
+  .article-header{padding:32px 0 24px}
+  .cta-block,.related-block{padding:28px 24px}
+  .cta-block a + a{margin-left:0;display:block;margin-top:12px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container" style="max-width:1040px;">
+    <a href="../index.html" class="nav-brand">Brazil Complexity</a>
+    <span class="nav-right-group" style="display:flex;align-items:center;gap:22px;"><a href="index.html" class="nav-back">← All Notes</a></span>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a><span class="breadcrumb-sep">/</span><a href="index.html">Research Notes</a><span class="breadcrumb-sep">/</span>Alternative Data in Brazil
+</div>
+
+
+<article>
+<header class="article-header">
+  <div class="container">
+    <div class="article-meta">
+      <span class="note-number">Research</span>
+      <span>·</span>
+      <span>Data · Risk Analytics</span>
+      <span>·</span>
+      <span data-pubdate="2026-10-09">Oct 2026</span>
+    </div>
+    <h1>Alternative Data in Brazil: Where the Operational Signals Actually Live</h1>
+    <p class="intro" style="margin-top:8px;">Searches for alternative data in Brazil usually return market-size reports. The investor's question is different: which data describe the operational layer of a specific deal, and where do they live. The answer is that most of it is public, and almost none of it is read.</p>
+  </div>
+</header>
+
+
+<div class="article-body">
+  <div class="container">
+
+    <p>Brazil is, by the standards of emerging markets, an unusually transparent state. Company registrations, property titles, court cases, licensing processes, health establishments, insurer networks and municipal budgets are public, mostly online, and mostly free. The limiting factor for a foreign investor is not access. It is knowing which source answers which operational question, and reading it at the level of one municipality, one building, one counterparty.</p>
+
+    <h2>Sources by operational question</h2>
+
+    <p><strong>Who is the counterparty?</strong> The federal company registry publishes the full base of registered companies, with partners, activities, addresses and status, as open data. A prospective partner's corporate history, affiliated companies and changes of control are a query, not a request.</p>
+
+    <p><strong>What is the asset, legally?</strong> The property's matrícula at the Registry of Deeds records ownership, encumbrances and declared built area. Certificates from the registry, from the courts and from tax authorities describe what can reach the asset. These are obtained, not searched, but they are public documents.</p>
+
+    <p><strong>Is anyone suing them?</strong> State and federal court systems expose case search by party name. Labor, tax and civil exposure of a seller, partner or tenant is visible — including the pattern of a company that litigates with every supplier.</p>
+
+    <p><strong>Can this place process the license?</strong> Municipal transparency portals publish budgets, staffing and, in better-run cities, licensing protocols and processing statistics. The official gazette records what was granted and to whom. Where these are thin, the thinness is itself the finding.</p>
+
+    <p><strong>What does the healthcare market look like here?</strong> The national registry of health establishments lists every clinic, hospital and diagnostic unit by municipality, with its services and capacity. The supplementary health regulator publishes beneficiaries and operators by municipality. Together they describe the competitive map and the payer map of a city at a resolution no market report reaches.</p>
+
+    <h2>What the data cannot replace</h2>
+
+    <p>Public data describes what was registered. It does not describe the sanitary inspector's interpretation of a norm, the actual time between filing and approval last year, or whether the two capable contractors in town are available. Those signals are held by local practitioners and surface in conversation, not in a dataset. The data narrows the questions; the ground truth answers them.</p>
+
+    <h2>Two resolutions of risk analytics</h2>
+
+    <p>There is a regime level and a deal level. At the regime level, public series on rates, regulation, courts and markets can be read descriptively to say what kind of environment a decision is being taken in — an instrument such as <a href="../radar.html">Radar Perene</a>, founded by this site's author, does exactly that from public data, daily. At the deal level, the same public sources are read for one municipality, one building and one counterparty. The first tells you the weather. The second tells you whether this particular roof holds. Market-size reports on "risk analytics in Brazil" describe neither.</p>
+
+    <p>The practical conclusion is the opposite of the one the search results suggest. The investor does not need to buy data about Brazil. The investor needs to read, at the right resolution, data Brazil already publishes — and to go and ask the questions the data leaves open.</p>
+
+
+    <div class="cta-block">
+      <span class="eyebrow">For This Analysis</span>
+      <h3>Volume II — Brazil Market Entry</h3>
+      <p>Maps the operational questions of an entry decision to the sources that answer them, and to the ones that only local conversation can.</p>
+      <a href="../books/brazil-market-entry.html">Preview the book →</a>
+      <a href="mailto:hello@brazilcomplexity.com?subject=work">Work inquiries → hello@brazilcomplexity.com</a>
+    </div>
+
+
+    <h2>Common questions</h2>
+
+    <div class="faq-block">
+      <details class="faq-item">
+        <summary>What public data is available for due diligence in Brazil?</summary>
+        <p>The federal company registry as open data, property titles and certificates from the Registry of Deeds, public case search in state and federal courts, municipal transparency portals and official gazettes, the national registry of health establishments, and the supplementary health regulator's data on operators and beneficiaries by municipality.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is alternative data in Brazil expensive or restricted?</summary>
+        <p>Most of the sources that describe the operational layer are public and free. The cost is in knowing which source answers which question and reading it at the level of one municipality or counterparty, which is interpretive work rather than data acquisition.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the difference between regime-level and deal-level risk analytics?</summary>
+        <p>Regime-level analytics read public series descriptively to characterize the environment, as Radar Perene does daily. Deal-level analytics read public records for one place, one asset and one counterparty. Both use public data; they answer different questions.</p>
+      </details>
+    </div>
+
+
+    <div class="related-block">
+      <h3>Continue reading</h3>
+      <p>The distinction between research and ground truth is in <a href="research-versus-ground-truth-brazil/">Research Versus Ground Truth in Brazil</a>. What standard checks document and what they miss: <a href="why-due-diligence-not-enough-brazil/">Why Due Diligence Is Not Enough</a>. The regime-level instrument is described on the <a href="../radar.html">Radar Perene</a> page.</p>
+      <a href="mailto:hello@brazilcomplexity.com?subject=work" class="button-link">Work inquiries → hello@brazilcomplexity.com</a>
+    </div>
+
+  </div>
+</div>
+</article>
+
+
+<div class="footer">
+  <div class="container">
+    <p style="margin:0;">Brazil Complexity — Independent work on structural asymmetry.</p>
+    <p style="margin:6px 0 0;">Luiz F. Nunes da Silva &nbsp;·&nbsp; <a href="../index.html">brazilcomplexity.com</a> &nbsp;·&nbsp; <a href="../about.html">About</a></p>
+  <p style="margin:14px 0 0;font-size:11px;">New research publishes here first. To be notified, <a href="mailto:hello@brazilcomplexity.com?subject=research">email with &lsquo;research&rsquo; in the subject</a>.</p></div>
+</div>
+
+</body>
+</html>
